@@ -50,6 +50,7 @@
     {"id":{"name":"spr_guaxinim2_idle","path":"sprites/spr_guaxinim2_idle/spr_guaxinim2_idle.yy",},},
     {"id":{"name":"spr_guaxinim3_idle","path":"sprites/spr_guaxinim3_idle/spr_guaxinim3_idle.yy",},},
     {"id":{"name":"spr_guaxinim4_idle","path":"sprites/spr_guaxinim4_idle/spr_guaxinim4_idle.yy",},},
+    {"id":{"name":"Timeline1","path":"timelines/Timeline1/Timeline1.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
