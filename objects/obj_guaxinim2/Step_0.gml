@@ -1,0 +1,1 @@
+mover(hspd); //Chamando a função de movimento e passando a velocidade;
