@@ -36,6 +36,7 @@
   },
   "name":"Joguinho do Twoberte",
   "resources":[
+    {"id":{"name":"Extension1","path":"extensions/Extension1/Extension1.yy",},},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"obj_guaxinim1","path":"objects/obj_guaxinim1/obj_guaxinim1.yy",},},
     {"id":{"name":"obj_guaxinim2","path":"objects/obj_guaxinim2/obj_guaxinim2.yy",},},
