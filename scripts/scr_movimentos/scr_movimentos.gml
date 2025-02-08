@@ -14,24 +14,6 @@
 		//Direção do Movimento. (Direita - Esquerda, onde -1 esqueda, 0 parado, 1 direita)
 		var _mover = (_direita - _esquerda) * _velocidade;
 		
-		//Define a distância mínima de erro entre player e parede
-		var _pixel_check = 0.1;
-		
-		//Checando colisão com parede
-		//SE colisão entre (playerX + distância de movimento) e Objeto Parede
-		if(place_meeting(x + _mover, y, obj_solido))
-		{
-			//Enquanto não existir colisão entre (playerX + distância de erro) e Objeto Parede
-			while(!place_meeting(x + _pixel_check, y, obj_solido))
-			{
-				//Acrescentar distância de erro no X do personagem
-				x += _pixel_check * sign(_mover)
-			}
-			
-			//Zerar velocidade para o player não entrar na parede
-			_mover = 0;
-		}
-		
 		//Adicionando a Velocidade horizontal a direção do movimento
 		hspeed = _mover;
 	}
@@ -58,24 +40,57 @@
 	//Função de Gravidade
 	function gravidade(_grav = 0.1)
 	{
+		//Dobrando a gravidade se o player estiver caindo
+		if(vspeed > 0) _grav *= 2;
+		
 		//Velocidade vertical é aumentada segundo as leis de newton
 		vspeed += _grav;
 		
-		//Define a distância mínima de erro entre player e parede
+		//Limita velocidade de queda
+		vspeed = min(vspeed, 6)
+	}
+	
+	function collision()
+	{	
+		//Define a distância mínima de erro entre player e colisão
 		var _pixel_check = 0.1;
 		
+		//COLISÃO HORIZONTAL
+		//SE colisão entre (playerX + distância de movimento) e Objeto Parede
+		if(place_meeting(x + hspeed, y, obj_solido))
+		{
+			
+			//Pega a direção
+			var _direction = sign(hspeed);
+			
+			//Enquanto não existir colisão entre (playerX + distância de erro) e Objeto Parede
+			while(!place_meeting(x + (_direction * _pixel_check), y, obj_solido))
+			{
+				//Acrescentar distância de erro no X do personagem
+				x += _pixel_check * _direction;
+			}
+			
+			//Zerar velocidade para o player não entrar na parede
+			hspeed = 0;
+		}
+		
+		//COLISÃO VERTICAL
 		//Checa se o player está encima do chão
 		if(place_meeting(x, y + vspeed, obj_solido))
 		{
+			
+			//pega a direção
+			var _direction = sign(vspeed);
+			
 			//Enquanto player não estiver encostando no chão
-			while(!place_meeting(x, y + _pixel_check, obj_solido))
+			while(!place_meeting(x, y + (_direction * _pixel_check), obj_solido))
 			{
 				//Aumenta o Y pela margem de erro;
-				y += _pixel_check;
+				y += (_direction * _pixel_check)
 			}
 			
 			//Zera a velocidade no chão, para não entrar no chão
 			vspeed = 0;
-		}
+		}	
 	}
 #endregion
