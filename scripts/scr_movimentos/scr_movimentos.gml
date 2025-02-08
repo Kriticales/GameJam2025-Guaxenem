@@ -36,6 +36,8 @@
 		hspeed = _mover;
 	}
 	
+	
+	
 	//Função de Pulo (Recebe velocidade de pulo)
 	function pular(_pulo = -5)
 	{
@@ -46,12 +48,24 @@
 		
 		if(place_meeting(x, y + 1, obj_chao))
 		{
-				if(_pulando)
+			if(_pulando)
 			{
 				//Adicionar Força de pula na velocidade
 				vspeed = _pulo;
 			}
 		}
 		//Se (Espaço pressionado)
+	}
+	
+	
+	
+	//Função de Gravidade
+	function gravidade()
+	{
+		
+		if(place_meeting(x, y + vspeed, obj_chao))
+		{
+			vspeed = 0;
+		}
 	}
 #endregion
