@@ -36,6 +36,7 @@
   },
   "name":"Joguinho do Twoberte",
   "resources":[
+    {"id":{"name":"OBEJETO","path":"objects/OBEJETO/OBEJETO.yy",},},
     {"id":{"name":"obj_guaxinim1","path":"objects/obj_guaxinim1/obj_guaxinim1.yy",},},
     {"id":{"name":"obj_guaxinim2","path":"objects/obj_guaxinim2/obj_guaxinim2.yy",},},
     {"id":{"name":"obj_guaxinim3","path":"objects/obj_guaxinim3/obj_guaxinim3.yy",},},
