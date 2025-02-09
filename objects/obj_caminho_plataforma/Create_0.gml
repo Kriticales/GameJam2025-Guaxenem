@@ -1,4 +1,8 @@
 /// @description 
+if(global.debug)
+{
+	visible = true;
+}
 //SE for inicio do caminho.
 if (inicio)
 {
