@@ -1,19 +1,97 @@
-#region VARIÁVEIS
-#endregion
-
 #region FUNÇÕES
 	//Função de movimento Horizontal (Recebe velocidade de Movimento)
-	function mover(_velocidade = 1)
+	function mover()
 	{
-		//Variável de Esquerda (verdadeiro se Esquerda OU A pressionado)
-		var _esquerda = keyboard_check(vk_left) || keyboard_check(ord("A"));
+		#region MOVIMENTO HORIZONTAL
+			//Variável de Esquerda (verdadeiro se Esquerda OU A pressionado)
+			var _esquerda = keyboard_check(vk_left) || keyboard_check(ord("A"));
 		
-		//Variável de Direita (verdadeiro se Direita OU D pressionado)
-		var _direita = keyboard_check(vk_right) || keyboard_check(ord("D"));
+			//Variável de Direita (verdadeiro se Direita OU D pressionado)
+			var _direita = keyboard_check(vk_right) || keyboard_check(ord("D"));
 		
-		//Direção do Movimento. (Direita - Esquerda, onde -1 esqueda, 0 parado, 1 direita)
-		var _mover = (_direita - _esquerda) * _velocidade;
+			//Direção do Movimento. (Direita - Esquerda, onde -1 esqueda, 0 parado, 1 direita)
+			var _mover = (_direita - _esquerda);
 		
+			//SE o objeto se move
+			if(_mover != 0)
+			{
+				//Acelera a velocidade horizontal na direção do comando
+				h_vel += _mover * h_acel;
+			
+				//Limita a velocidade horizontal
+				h_vel = clamp(h_vel, -max_vel, max_vel)
+			}
+			//se o objeto NÃO se move
+			else
+			{
+				//Checa se existe velocidade para direita (positiva)
+				if(h_vel > h_dcel)
+				{
+					//Desacelera
+					h_vel -= h_dcel;
+				}
+				
+				//Checa se existe velocidade para esquerda (negativa)
+				else if(h_vel < -h_dcel)
+				{
+					//Desacelera
+					h_vel += h_dcel;
+				}
+				
+				//Zera a velocidade
+				else
+				{
+					h_vel = 0;
+				}
+			}
+		#endregion
+		
+		#region COLISÕES HORIZONTAIS E MOVIMENTO
+		
+			col_def(obj_solido)
+			col_ghost(obj_plataforma)
+			
+			x += h_vel;
+			
+		#endregion
+		
+		#region GRAVIDADE
+
+			v_vel += grav;
+			
+		#endregion
+		
+		#region COLISÕES VERTICAIS
+		
+			var _esta_no_chao =
+			col_def(obj_solido) ||
+			col_ghost(obj_plataforma)
+			
+		#endregion
+		
+		#region PULO
+		
+			var _pulo = keyboard_check_pressed(vk_space);
+			var _teto = instance_place(x, y+pulo, obj_solido)
+			
+			
+			//if(_teto != noone)
+			//{
+			//	var _forca = point_distance(x, y.bbox_top, x, _teto.bbox_bottom)
+			//	show_debug_message(_forca)
+			//}
+			
+			if(_pulo && _esta_no_chao)
+			{
+				v_vel = pulo;
+			}
+			
+			y += v_vel;
+		
+		#endregion
+		
+		
+		//MUDA SPRITE
 		if(_mover < 0)
 		{
 			image_xscale = -1;
@@ -21,9 +99,6 @@
 		{
 			image_xscale = 1
 		}
-		
-		//Adicionando a Velocidade horizontal a direção do movimento
-		hspeed = _mover;
 	}
 	
 	
@@ -66,82 +141,16 @@
 	{	
 		
 		//Define a distância mínima de erro entre player e colisão
-		var _pixel_check = 0.1;
+		var _pixel_check = 0.5;
 		
-		#region COLISÃO COM CAIXAS
-			
-			var _caixa = instance_place(x + hspeed, y, obj_caixa);
-			if(_caixa)
-			{
-				hspeed = (hspeed/2)
-				_caixa.x += hspeed
-			}
-			
-			
-		#endregion
+		col_caixa()
 		
-		#region COLISÃO COM PLATAFORMAS
-			var _plataforma = instance_place(x, y + max(1, vspeed), obj_plataforma);
-			if (_plataforma && round(bbox_bottom) <= _plataforma.bbox_top)
-			{
-				//Pixel-perfect collisions
-				if (vspeed > 0)
-				{
-					while (!place_meeting(x, y + _pixel_check, obj_plataforma)) {
-						y += _pixel_check;
-					}
-	
-					vspeed = 0;
-				}
-	
-				//// Add velocity
-				hspeed += _plataforma.hspd;
-				y += _plataforma.vspd;
-			}
-		#endregion
+		col_plataforma();
 		
-		#region COLISÃO HORIZONTAL E VERTICAL
-			//COLISÃO HORIZONTAL
-			//SE colisão entre (playerX + distância de movimento) e Objeto Parede
-			if(place_meeting(x + hspeed, y, obj_solido))
-			{
-			
-				//Pega a direção
-				var _direction = sign(hspeed);
-			
-				//Enquanto não existir colisão entre (playerX + distância de erro) e Objeto Parede
-				while(!place_meeting(x + (_direction * _pixel_check), y, obj_solido))
-				{
-					//Acrescentar distância de erro no X do personagem
-					x += _pixel_check * _direction;
-				}
-			
-				//Zerar velocidade para o player não entrar na parede
-				hspeed = 0;
-			}
-		
-			//COLISÃO VERTICAL
-			//Checa se o player está encima do chão
-			if(place_meeting(x, y + vspeed, obj_solido))
-			{
-			
-				//pega a direção
-				var _direction = sign(vspeed);
-			
-				//Enquanto player não estiver encostando no chão
-				while(!place_meeting(x, y + (_direction * _pixel_check), obj_solido))
-				{
-					//Aumenta o Y pela margem de erro;
-					y += (_direction * _pixel_check)
-				}
-			
-				//Zera a velocidade no chão, para não entrar no chão
-				vspeed = 0;
-			}	
-		#endregion
+		col_solido();
 		
 		#region COLISÃO COM O BOLOTA
-			if(place_meeting(x + hspeed, y + vspeed, obj_bolota))
+			if(place_meeting(x , y + vspeed, obj_bolota))
 			{
 				if(obj_bolota.estado == "TRAMPOLIM")
 				{

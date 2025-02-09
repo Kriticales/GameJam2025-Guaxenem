@@ -8,8 +8,8 @@
   "name":"obj_caminho_plataforma",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Interativos",
+    "path":"folders/Objects/Interativos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -37,5 +37,5 @@
     "path":"sprites/spr_point/spr_point.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
