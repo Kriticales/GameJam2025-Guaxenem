@@ -48,8 +48,8 @@
 		
 		#region COLISÕES HORIZONTAIS E MOVIMENTO
 		
-			col_def(obj_solido)
-			col_ghost(obj_plataforma)
+			col_caixah(obj_caixa)
+			col_defh(obj_solido)
 			
 			x += h_vel;
 			
@@ -64,7 +64,8 @@
 		#region COLISÕES VERTICAIS
 		
 			var _esta_no_chao =
-			col_def(obj_solido) ||
+			col_defv(obj_solido) ||
+			col_defv(obj_caixa) ||
 			col_ghost(obj_plataforma)
 			
 		#endregion
@@ -73,17 +74,17 @@
 		
 			var _pulo = keyboard_check_pressed(vk_space);
 			var _teto = instance_place(x, y+pulo, obj_solido)
+			var _fpulo = pulo;
 			
 			
-			//if(_teto != noone)
-			//{
-			//	var _forca = point_distance(x, y.bbox_top, x, _teto.bbox_bottom)
-			//	show_debug_message(_forca)
-			//}
+			if(_teto != noone)
+			{
+				_fpulo = _teto.bbox_bottom - bbox_top;
+			}
 			
 			if(_pulo && _esta_no_chao)
 			{
-				v_vel = pulo;
+				v_vel = _fpulo;
 			}
 			
 			y += v_vel;

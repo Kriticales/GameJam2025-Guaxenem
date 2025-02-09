@@ -1,13 +1,15 @@
 // Os recursos de script mudaram para a v2.3.0; veja
 //PARA COLISÕES COM OBJETOS SÓLIDOS
-function col_def(_instance = obj_solido)
+
+//COLISÃO VERTICAL
+function col_defv(_instance = obj_solido)
 {
 	//Define a distância mínima de erro entre player e colisão
 	var _pixel_check = 1;
 	
+	//Define Pulo
 	var _ta_no_chao = false;
 	
-	//COLISÃO VERTICAL
 	//Checa se o player está encima do chão
 	if(place_meeting(x, y + v_vel, _instance))
 	{
@@ -26,8 +28,15 @@ function col_def(_instance = obj_solido)
 		v_vel = 0;
 		_ta_no_chao = true;
 	}
+	return _ta_no_chao;
+}
+
+//COLISÃO HORIZONTAL
+function col_defh(_instance = obj_solido)
+{
+	//Define a distância mínima de erro entre player e colisão
+	var _pixel_check = 1;
 	
-	//COLISÃO HORIZONTAL
 	//SE colisão entre (playerX + distância de movimento) e Objeto Parede
 	if(place_meeting(x + h_vel, y, _instance))
 	{
@@ -45,7 +54,6 @@ function col_def(_instance = obj_solido)
 		//Zerar velocidade para o player não entrar na parede
 		 h_vel = 0;
 	}
-	return _ta_no_chao;
 }
 
 //PARA COLISÕES DE UMA VIA (EX: PLATAFORMAS)
@@ -53,7 +61,7 @@ function col_ghost(_instance = obj_plataforma)
 {
 	//Define a distância mínima de erro entre player e colisão
 	var _pixel_check = 1;
-	
+	var _ta_no_chao = false;
 	
 	var _plataforma = instance_place(x, y + max(1, v_vel), _instance);
 			if (_plataforma && round(bbox_bottom) <= _plataforma.bbox_top)
@@ -69,12 +77,57 @@ function col_ghost(_instance = obj_plataforma)
 				}
 	
 				//// Add velocity
-				h_vel += _plataforma.hspd;
-				v_vel += _plataforma.vspd;
-				return true;
+				x += _plataforma.hspd;
+				y += _plataforma.vspd;
+				_ta_no_chao = true;
 			}
-			else
+			return _ta_no_chao
+}
+
+//PARA COLISÕES COM CAIXA
+function col_caixah(_instance = obj_caixa)
+{
+	if(keyboard_check(action_key))
+	{
+		var _caixa = instance_place(x + h_vel, y, _instance);
+	
+		if(_caixa != noone)
+		{
+			if(place_meeting(x + h_vel, y, _instance))
 			{
-				return false;
+			
+				h_vel /= 2;
+			
+				with(_caixa){
+					h_vel = other.h_vel;
+				
+					col_defh(obj_caixa)
+					col_defh(obj_solido)
+				
+					x += h_vel;
+				}
 			}
+		}
+	
+		_caixa = instance_place(x - h_vel, y, _instance);
+	
+		if(_caixa != noone)
+		{
+			if(place_meeting(x - h_vel, y, _instance))
+			{
+			
+				h_vel /= 2;
+			
+				with(_caixa){
+					h_vel = other.h_vel;
+				
+					col_defh(obj_caixa)
+					col_defh(obj_solido)
+					col_defh(obj_player)
+				
+					x += h_vel;
+				}
+			}
+		}
+	}
 }
