@@ -14,6 +14,14 @@
 		//Direção do Movimento. (Direita - Esquerda, onde -1 esqueda, 0 parado, 1 direita)
 		var _mover = (_direita - _esquerda) * _velocidade;
 		
+		if(_mover < 0)
+		{
+			image_xscale = -1;
+		}else if(_mover > 0)
+		{
+			image_xscale = 1
+		}
+		
 		//Adicionando a Velocidade horizontal a direção do movimento
 		hspeed = _mover;
 	}
