@@ -37,6 +37,7 @@
   "name":"Joguinho do Twoberte",
   "resources":[
     {"id":{"name":"amiga_da_minha_mulher","path":"objects/amiga_da_minha_mulher/amiga_da_minha_mulher.yy",},},
+    {"id":{"name":"Se","path":"notes/Se/Se.yy",},},
     {"id":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},},
     {"id":{"name":"obj_guaxinim1","path":"objects/obj_guaxinim1/obj_guaxinim1.yy",},},
     {"id":{"name":"obj_guaxinim2","path":"objects/obj_guaxinim2/obj_guaxinim2.yy",},},
