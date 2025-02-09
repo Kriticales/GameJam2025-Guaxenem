@@ -1,4 +1,4 @@
-//Roda o movimento apenas se o personagem está selecionado.
+mul//Roda o movimento apenas se o personagem está selecionado.
 if(global.guaxinim[global.selecionado] == object_index)
 {
 	mover(hspd); //Chamando a função de movimento e passando a velocidade;
