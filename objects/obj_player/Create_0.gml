@@ -7,4 +7,9 @@
 	
 	v_vel = 0; //movimento vertical
 	h_vel = 0; //movimento horizontal
+	
+	action_area = (sprite_width/2) + 2;
+	action_key = vk_shift;
+	
+	estado = "LIVRE"
 #endregion
