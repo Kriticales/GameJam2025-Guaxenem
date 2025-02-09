@@ -50,6 +50,9 @@
 		vspeed = min(vspeed, 6)
 	}
 	
+	
+	
+	//Função de Colisão
 	function collision()
 	{	
 		//Define a distância mínima de erro entre player e colisão
