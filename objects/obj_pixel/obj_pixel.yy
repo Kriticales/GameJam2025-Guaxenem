@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_guaxinim4",
+  "%Name":"obj_pixel",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_guaxinim4",
+  "name":"obj_pixel",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"guaxinins",
+    "path":"folders/Objects/guaxinins.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_guaxinim4_idle",
-    "path":"sprites/spr_guaxinim4_idle/spr_guaxinim4_idle.yy",
+    "name":"spr_guaxinim1_idle",
+    "path":"sprites/spr_guaxinim1_idle/spr_guaxinim1_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,12 +1,12 @@
 #region VARIÁVEIS
 	global.debug = false;
-	global.selecionado = 0;
+	global.selecionado = 3;
 	global.guaxinim = 
 	[
-		obj_guaxinim1,
-		obj_guaxinim2,
-		obj_guaxinim3,
-		obj_guaxinim4
+		obj_pixel,
+		obj_rex,
+		obj_bolota,
+		obj_fumaca
 	];
 #endregion
 

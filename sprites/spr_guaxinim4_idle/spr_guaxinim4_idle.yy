@@ -1,9 +1,9 @@
 {
   "$GMSprite":"",
   "%Name":"spr_guaxinim4_idle",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":29,
-  "bbox_left":0,
+  "bbox_left":4,
   "bbox_right":27,
   "bbox_top":8,
   "collisionKind":1,

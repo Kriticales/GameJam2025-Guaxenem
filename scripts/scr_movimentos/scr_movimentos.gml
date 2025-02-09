@@ -14,6 +14,14 @@
 		//Direção do Movimento. (Direita - Esquerda, onde -1 esqueda, 0 parado, 1 direita)
 		var _mover = (_direita - _esquerda) * _velocidade;
 		
+		if(_mover < 0)
+		{
+			image_xscale = -1;
+		}else if(_mover > 0)
+		{
+			image_xscale = 1
+		}
+		
 		//Adicionando a Velocidade horizontal a direção do movimento
 		hspeed = _mover;
 	}
@@ -58,6 +66,22 @@
 		//Define a distância mínima de erro entre player e colisão
 		var _pixel_check = 0.1;
 		
+		var _plataforma_movendo = instance_place(x, y + 1, obj_plataform);
+		if (_plataforma_movendo && bbox_bottom <= _plataforma_movendo.bbox_top) {
+			// Pixel-perfect collisions
+			if (vspeed > 0) {
+				while (!place_meeting(x, y + sign(vspeed), obj_plataform)) {
+					y += sign(vspeed);
+				}
+	
+				vspeed = 0;
+			}
+	
+			// Add velocity
+			hspeed += _plataforma_movendo.moveX;
+			vspeed += _plataforma_movendo.moveY;
+		}
+		
 		//COLISÃO HORIZONTAL
 		//SE colisão entre (playerX + distância de movimento) e Objeto Parede
 		if(place_meeting(x + hspeed, y, obj_solido))
@@ -94,6 +118,14 @@
 			
 			//Zera a velocidade no chão, para não entrar no chão
 			vspeed = 0;
+		}	
+		
+		if(place_meeting(x + hspeed, y + vspeed, obj_bolota))
+		{
+			if(obj_bolota.estado == "TRAMPOLIM")
+			{
+				vspeed = -10
+			}
 		}	
 	}
 #endregion
