@@ -1,0 +1,1 @@
+going_to_start = platform_speed;
