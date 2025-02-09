@@ -9,8 +9,8 @@
   "name":"obj_fumaca",
   "overriddenProperties":[],
   "parent":{
-    "name":"guaxinins",
-    "path":"folders/Objects/guaxinins.yy",
+    "name":"Guaxinins",
+    "path":"folders/Objects/Guaxinins.yy",
   },
   "parentObjectId":null,
   "persistent":false,

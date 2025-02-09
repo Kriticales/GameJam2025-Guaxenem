@@ -9,8 +9,8 @@
   "name":"obj_pixel",
   "overriddenProperties":[],
   "parent":{
-    "name":"guaxinins",
-    "path":"folders/Objects/guaxinins.yy",
+    "name":"Guaxinins",
+    "path":"folders/Objects/Guaxinins.yy",
   },
   "parentObjectId":null,
   "persistent":false,
