@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"amiga_da_minha_mulher",
+  "%Name":"obj_caixa",
   "eventList":[],
   "managed":true,
-  "name":"amiga_da_minha_mulher",
+  "name":"obj_caixa",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_caixa",
+    "path":"sprites/spr_caixa/spr_caixa.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
