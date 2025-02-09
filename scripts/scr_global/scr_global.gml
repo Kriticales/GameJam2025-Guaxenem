@@ -1,6 +1,6 @@
 #region VARIÁVEIS
 	global.debug = false;
-	global.selecionado = 0;
+	global.selecionado = 1;
 	global.guaxinim = 
 	[
 		obj_pixel,
