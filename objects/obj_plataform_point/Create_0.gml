@@ -1,4 +1,4 @@
-if (stating_point) //Inicia do Ponto
+if (starting_point) //Inicia do Ponto
 	{
 		plataform_ID.startX = x; //Começa
 		plataform_ID.startY = y;

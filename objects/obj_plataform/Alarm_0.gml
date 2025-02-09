@@ -1,1 +1,1 @@
-going_to_start = platform_speed;
+current_speed = platform_speed;
