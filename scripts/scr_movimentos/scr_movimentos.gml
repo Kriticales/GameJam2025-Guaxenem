@@ -66,11 +66,11 @@
 		//Define a distância mínima de erro entre player e colisão
 		var _pixel_check = 0.1;
 		
-		var _plataforma_movendo = instance_place(x, y + 1, obj_plataform);
+		var _plataforma_movendo = instance_place(x, y + 1, obj_platform);
 		if (_plataforma_movendo && bbox_bottom <= _plataforma_movendo.bbox_top) {
 			// Pixel-perfect collisions
 			if (vspeed > 0) {
-				while (!place_meeting(x, y + sign(vspeed), obj_plataform)) {
+				while (!place_meeting(x, y + sign(vspeed), obj_platform)) {
 					y += sign(vspeed);
 				}
 	
