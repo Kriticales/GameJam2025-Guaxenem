@@ -66,6 +66,22 @@
 		//Define a distância mínima de erro entre player e colisão
 		var _pixel_check = 0.1;
 		
+		var _plataforma_movendo = instance_place(x, y + 1, obj_plataform);
+		if (_plataforma_movendo && bbox_bottom <= _plataforma_movendo.bbox_top) {
+			// Pixel-perfect collisions
+			if (vspeed > 0) {
+				while (!place_meeting(x, y + sign(vspeed), obj_plataform)) {
+					y += sign(vspeed);
+				}
+	
+				vspeed = 0;
+			}
+	
+			// Add velocity
+			hspeed += _plataforma_movendo.moveX;
+			vspeed += _plataforma_movendo.moveY;
+		}
+		
 		//COLISÃO HORIZONTAL
 		//SE colisão entre (playerX + distância de movimento) e Objeto Parede
 		if(place_meeting(x + hspeed, y, obj_solido))
