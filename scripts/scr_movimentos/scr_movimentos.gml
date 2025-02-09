@@ -103,5 +103,13 @@
 			//Zera a velocidade no chão, para não entrar no chão
 			vspeed = 0;
 		}	
+		
+		if(place_meeting(x + hspeed, y + vspeed, obj_bolota))
+		{
+			if(obj_bolota.estado == "TRAMPOLIM")
+			{
+				vspeed = -10
+			}
+		}	
 	}
 #endregion
