@@ -1,10 +1,9 @@
-#region VARIÁVEIS
-	max_vel = 8;	//velocidade máxima
-	h_acel = 2;		//aceleração
-	h_dcel = 1;		//desaceleração
-	grav = 1		//gravidade;
-	pulo = -12;		//forca do pulo
-	
-	v_vel = 0; //movimento vertical
-	h_vel = 0; //movimento horizontal
-#endregion
+/// @description Inserir descrição aqui
+// Você pode escrever seu código neste editor
+
+// Inherit the parent event
+event_inherited();
+
+dash_vel = 20;
+dash_time = 15;
+dash_timer = dash_time;
