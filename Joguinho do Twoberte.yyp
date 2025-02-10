@@ -40,6 +40,7 @@
   "resources":[
     {"id":{"name":"obj_bolota","path":"objects/obj_bolota/obj_bolota.yy",},},
     {"id":{"name":"obj_caixa","path":"objects/obj_caixa/obj_caixa.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_caminho_plataforma","path":"objects/obj_caminho_plataforma/obj_caminho_plataforma.yy",},},
     {"id":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},},
     {"id":{"name":"obj_fumaca","path":"objects/obj_fumaca/obj_fumaca.yy",},},
