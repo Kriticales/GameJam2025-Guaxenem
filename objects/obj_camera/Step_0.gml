@@ -1,7 +1,7 @@
 //Checando se o player existe
-if (instance_exists(obj_rex)) //Checando se o player existe
+if (instance_exists(global.guaxinim[global.selecionado])) //Checando se o player existe
 {
-    alvo = obj_rex
+    alvo = global.guaxinim[global.selecionado];
 }
 
 //Seguindo o player

@@ -1,8 +1,8 @@
 #region FUNÇÕES
-	//Função de movimento Horizontal (Recebe velocidade de Movimento)
+	//CONTROLE DO PLAYER
 	function control()
 	{
-		#region MOVIMENTO HORIZONTAL
+		#region MOVIMENTAÇÃO HORIZONTAL
 			//Variável de Esquerda (verdadeiro se Esquerda OU A pressionado)
 			var _esquerda = keyboard_check(vk_left) || keyboard_check(ord("A"));
 		
@@ -19,7 +19,7 @@
 				h_vel += _mover * h_acel;
 			
 				//Limita a velocidade horizontal
-				h_vel = clamp(h_vel, -max_vel, max_vel)
+				h_vel = clamp(h_vel, -max_vel, max_vel);
 			}
 			//se o objeto NÃO se move
 			else if(!dashing)
@@ -41,102 +41,156 @@
 				//Zera a velocidade
 				else
 				{
-					h_vel = 0;
-					afloat = false;
+					h_vel = 0; //Zera a velocidade
 				}
 			}
+		#endregion
+		
+		#region CHECANDO O DASH
+			dash_c_timer -= 1; //Reduz o timer em 1 por tick
 			
-			dash_c_timer -= 1;
+			//Tecla de ação pressionada?
+			var _key = keyboard_check_pressed(action_key)
 			
-			if(keyboard_check_pressed(action_key) && object_index == obj_fumaca && !dashing && dash_c_timer <= 0)
+			//Objeto é o fumaça?
+			var _index_obj = object_index == obj_fumaca
+			
+			//timer de cooldown zerou?
+			var _timer = dash_c_timer <= 0
+			
+			//se for o OBJ & Pressionar ação & timer zerou & NÃO está dashando
+			if(_index_obj && _key && _timer && !dashing)
 			{
+				//começa o dash
 				dashing = true;
+				
+				//reseta o cooldown
 				dash_c_timer = dash_cooldown;
 			}
 			
+			//Se está dashando
 			if(dashing)
 			{
-				h_vel = dash_vel * sign(image_xscale);
+				//reduz o timer do dash
 				dash_timer -= 1
 				
+				//Velocidade = direção * velocidade do dash
+				h_vel = dash_vel * sign(image_xscale);
+				
+				//se o timer do dash zerou
 				if(dash_timer <= 0)
 				{
+					//desliga o dash
 					dashing = false;
-					h_vel = lerp(h_vel, 0.1, 0.2);
+					
+					//reduz a velocidade para 0
+					h_vel = lerp(h_vel, 0, 0.2);
+					
+					//reseta o tempo de dash
 					dash_timer = dash_time;
 				}
 			}
+		#endregion
 			
-			if(keyboard_check_pressed(action_key) && object_index == obj_bolota)
+		#region SETTANDO ESTADOS DE TRAMPOLIM DO BOLOTA
+			//Qual objeto?
+			_index_obj = object_index == obj_bolota;
+			
+			//Se tecla pressionada e Objeto
+			if(_key && _index_obj)
 			{
-				if(estado = "TRAMPOLIM")
+				switch(estado)
 				{
-					estado = "LIVRE"
-				}
-				else
-				{
-					estado = "TRAMPOLIM"
+					//caso for trampolim
+					case "TRAMPOLIM":
+					
+						//mudar pra livre
+						estado = "LIVRE"
+					break;
+					
+					//caso for livre
+					case "LIVRE":
+					
+						//mudar pra trampolim
+						estado = "TRAMPOLIM"
+					break;
 				}
 			}
+			
 			if(estado = "TRAMPOLIM")
 			{
 				h_vel = 0;
 			}
-			
-		#endregion	
+		#endregion
 	}
 	
-	function pulofunc(_chao, pulo)
+	function pulofunc(_chao, _pulo)
 		{
-		#region PULO
+			#region PULO
 		
-			var _pulo = keyboard_check_pressed(vk_space);
-			var _teto = instance_place(x, y+pulo, obj_solido)
-			var _fpulo = pulo;
+				//setta key de pulo
+				var _key = keyboard_check_pressed(vk_space);
+			
+				//procura se existe um teto
+				var _teto = instance_place(x, y + _pulo, obj_solido);
+			
+				//define a força do pulo
+				var _fpulo = _pulo;
 			
 			
-			if(_teto != noone)
-			{
-				_fpulo = _teto.bbox_bottom - bbox_top;
-			}
+				//se existir um teto
+				if(_teto != noone)
+				{
+				
+					//faz a força ser igual a altura do teto
+					_fpulo = _teto.bbox_bottom - bbox_top;
+				}
 			
-			if(_pulo && _chao)
-			{
-				v_vel = _fpulo;
-			}
-		
-		#endregion
+				//Se clicou no pulo e está no chão
+				if(_key && _chao)
+				{
+					//velocidade vertical = força do pulo
+					v_vel = _fpulo;
+				}
+			#endregion
 		}
 	
+	//chama a física, passando (controle horizontal) e (controle de pulo)
 	function mover(_control = empty, _pulofunc = empty)
 	{
+		//Checa se o estado é Trampolim
 		if (estado != "TRAMPOLIM")
 		{
-			estado = "LIVRE"	
+			//Se não for, se torna livre
+			estado = "LIVRE";	
 		}
 		
+		//chama a variavel de controle (só existe se for o objeto selecionado)
 		_control()
 		
 		#region COLISÕES HORIZONTAIS E MOVIMENTO
 		
-			col_caixah(obj_caixa)
-			col_defh(obj_solido)
-			col_bolota(obj_bolota)
+			col_caixah(obj_caixa); //colido com caixas
+			col_defh(obj_solido); //colido com sólidos
+			col_bolota(obj_bolota); //colido com o bolota
 			
-			x += h_vel;
+			x += h_vel; //aumento meu X baseado na minha velocidade
 			
 		#endregion
 		
 		#region GRAVIDADE
 		
-		if(!dashing)
-		{
-			v_vel += grav;
-		}
-		else
-		{
-			v_vel = 0;
-		}
+			//checa se está dashando
+			if(!dashing)
+			{
+				//NÂO está dashando, aplica gravidade
+				v_vel += grav;
+			}
+			else
+			{
+				//está dashando, ignora a gravidade;
+				v_vel = 0;
+			}
 			
 		#endregion
 		
@@ -149,17 +203,23 @@
 			
 		#endregion
 		
+		//chama função de pulo
 		_pulofunc(_esta_no_chao, pulo)
 		
+		//adiciona velocidade vertical ao Y
 		y += v_vel;
-			if(v_vel < 0)
-			{
-				estado = "PULOU";
-			}
-			if(v_vel > 1)
-			{
-				estado = "CAINDO";
-			}
+		
+		//controla o estado do pulo;
+		if(v_vel < 0)
+		{
+			//se Vel negativa, PULOU
+			estado = "PULOU";
+		}
+		if(v_vel > 1)
+		{
+			//se Vel positiva, CAIU
+			estado = "CAINDO";
+		}
 		
 		//MUDA SPRITE
 		if(h_vel < 0)
