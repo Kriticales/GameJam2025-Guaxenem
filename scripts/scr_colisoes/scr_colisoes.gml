@@ -84,84 +84,104 @@ function col_ghost(_instance = obj_plataforma)
 			return _ta_no_chao
 }
 
-//PARA COLISÕES COM CAIXA
+//PARA COLISÕES COM CAIXA (Empurra/puxa)
 function col_caixah(_instance = obj_caixa)
 {
-	var _check1 = false;
-	var _check2 = false;
-	if(keyboard_check(action_key) && object_index == obj_rex)
+	var _key = keyboard_check(action_key);
+	var _index_obj = object_index == obj_rex;
+	
+	//Se clicou na ação e é o rex
+	if(_key && _index_obj)
 	{
+		//se o estado for diferente de livre
 		if(estado != "LIVRE")
 		{
+			//ignorar tudo
 			return;
 		}
 		
+		//setta estado para livre
 		estado = "LIVRE"
 		
+		//verifica se existe uma instancia de caixa ao alcance do jogador
 		var _caixa = instance_place(x + h_vel, y, _instance);
 
+		//caso exista
 		if(_caixa != noone)
 		{
+			//caso a caixa entre na colisão com o jogador
 			if(place_meeting(x + h_vel, y, _instance))
 			{
 			
+				//reduz a velocidade do jogador
 				h_vel /= 2;
 			
+				//entra no objeto caixa
 				with(_caixa){
+					
+					//setta velocidade = velocidade do jogador
 					h_vel = other.h_vel;
-				
+					
+					//define colisões
 					col_defh(obj_caixa)
 					col_defh(obj_solido)
 					col_defh(obj_player)
 					
+					//adiciona a velocidade ao X
 					x += h_vel;
 				}
-				_check1 = true;
+				
+				//muda o estado do jogador para Empurrando
 				estado = "EMPURRANDO"
 			}
 		}
 			
+		//verifica se existe uma instancia de caixa ao alcance do jogador
 		_caixa = instance_place(x - h_vel, y, _instance);
-	
+		
+		//caso exista
 		if(_caixa != noone)
 		{
+			//caso a caixa saia da colisão com o jogador
 			if(place_meeting(x - h_vel, y, _instance))
 			{
 			
+				//setta velocidade do jogador
 				h_vel /= 2;
 			
+				//entra no objeto caixa
 				with(_caixa){
+					
+					//setta velocidade = velocidade do jogador
 					h_vel = other.h_vel;
 				
+					//define colisões
 					col_defh(obj_caixa)
 					col_defh(obj_solido)
 					col_defh(obj_player)
 					
+					//adiciona a velocidade ao X
 					x += h_vel;
 				}
 				
-				_check2 = true;
+				//define o estado como Puxando
 				estado = "PUXANDO"
 			}
 		}
-	}
-	
-	if(place_meeting(x, y + max(1, v_vel), _instance))
-	{
-		
 	}
 }
 
 //PARA O BOLOTA
 function col_bolota(_instance = obj_bolota)
 	{	
-		var _pixel_check = 1;
-		
-		
+		//checa se entra em contato com o bolota
 		if(place_meeting(x , y + v_vel, obj_bolota))
 		{
+			
+			//checa se o estado do bolota é Trampolim
 			if(obj_bolota.estado == "TRAMPOLIM")
 			{
+				//setta velocidade vertical
 				v_vel = -20
 			}
 		}	

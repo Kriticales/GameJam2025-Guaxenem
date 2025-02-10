@@ -1,9 +1,5 @@
-/// @description Inserir descrição aqui
-// Você pode escrever seu código neste editor
+event_inherited(); //puxa variáveis do obj_player
 
-// Inherit the parent event
-event_inherited();
-
-dash_vel = 20;
-dash_time = 15;
-dash_timer = dash_time;
+dash_vel = 20;			//setta velocidade do dash
+dash_time = 15;			//setta tempo do dash
+dash_timer = dash_time; //timer do dash

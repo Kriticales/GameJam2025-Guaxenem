@@ -9,13 +9,11 @@
 	v_vel = 0; //movimento vertical
 	h_vel = 0; //movimento horizontal
 	
-	action_area = (sprite_width/2) + 2;
-	action_key = vk_shift;
+	action_area = (sprite_width/2) + 2;	//setta a area de interação
+	action_key = vk_shift;				//setta a tecla de interação
 	
-	estado = "LIVRE"
-	puxando = noone;
-	dashing = false;
-	dash_cooldown = game_get_speed(gamespeed_fps) * 1;
-	dash_c_timer = dash_cooldown;
-	afloat = false;
+	estado = "LIVRE"	//Inicia os estados
+	dashing = false;	//Checa se o personagem tem dash
+	dash_cooldown = game_get_speed(gamespeed_fps) * 1;	//cooldown do dash
+	dash_c_timer = dash_cooldown;						//timer do cooldown
 #endregion
