@@ -112,6 +112,7 @@ function col_caixah(_instance = obj_caixa)
 				
 					col_defh(obj_caixa)
 					col_defh(obj_solido)
+					col_defh(obj_player)
 					
 					x += h_vel;
 				}
