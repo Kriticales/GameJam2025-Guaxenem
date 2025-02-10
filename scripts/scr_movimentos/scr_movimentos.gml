@@ -84,6 +84,7 @@
 			
 			if(_pulo && _esta_no_chao)
 			{
+				estado = "PULO";
 				v_vel = _fpulo;
 			}
 			
@@ -143,13 +144,6 @@
 		
 		//Define a distância mínima de erro entre player e colisão
 		var _pixel_check = 0.5;
-		
-		col_caixa()
-		
-		col_plataforma();
-		
-		col_solido();
-		
 		#region COLISÃO COM O BOLOTA
 			if(place_meeting(x , y + vspeed, obj_bolota))
 			{

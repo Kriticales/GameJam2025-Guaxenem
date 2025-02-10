@@ -87,10 +87,12 @@ function col_ghost(_instance = obj_plataforma)
 //PARA COLISÕES COM CAIXA
 function col_caixah(_instance = obj_caixa)
 {
+	var _check1 = false;
+	var _check2 = false;
 	if(keyboard_check(action_key))
 	{
 		var _caixa = instance_place(x + h_vel, y, _instance);
-	
+
 		if(_caixa != noone)
 		{
 			if(place_meeting(x + h_vel, y, _instance))
@@ -106,9 +108,11 @@ function col_caixah(_instance = obj_caixa)
 				
 					x += h_vel;
 				}
+				_check1 = true;
+				estado = "EMPURRANDO"
 			}
 		}
-	
+			
 		_caixa = instance_place(x - h_vel, y, _instance);
 	
 		if(_caixa != noone)
@@ -127,7 +131,21 @@ function col_caixah(_instance = obj_caixa)
 				
 					x += h_vel;
 				}
+				
+				_check2 = true;
+				estado = "PUXANDO"
 			}
 		}
+		else
+		{
+			if(!_check1 && !_check1)
+			{
+				estado = "LIVRE"	
+			}
+		}
+	}
+	else
+	{
+		estado = "LIVRE"	
 	}
 }
