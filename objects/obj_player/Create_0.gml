@@ -12,4 +12,5 @@
 	action_key = vk_shift;
 	
 	estado = "LIVRE"
+	puxando = noone;
 #endregion
