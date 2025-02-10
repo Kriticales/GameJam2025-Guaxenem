@@ -1,0 +1,43 @@
+{
+  "$GMObject":"",
+  "%Name":"obj_botao_debug",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
+  "managed":true,
+  "name":"obj_botao_debug",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"propertyId":{"name":"texto_dos_botao","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"B",},
+  ],
+  "parent":{
+    "name":"Botoes e Menu",
+    "path":"folders/Objects/Sistema/Botoes e Menu.yy",
+  },
+  "parentObjectId":{
+    "name":"obj_botao_pai",
+    "path":"objects/obj_botao_pai/obj_botao_pai.yy",
+  },
+  "persistent":false,
+  "physicsAngularDamping":0.1,
+  "physicsDensity":0.5,
+  "physicsFriction":0.2,
+  "physicsGroup":1,
+  "physicsKinematic":false,
+  "physicsLinearDamping":0.1,
+  "physicsObject":false,
+  "physicsRestitution":0.1,
+  "physicsSensor":false,
+  "physicsShape":1,
+  "physicsShapePoints":[],
+  "physicsStartAwake":true,
+  "properties":[],
+  "resourceType":"GMObject",
+  "resourceVersion":"2.0",
+  "solid":false,
+  "spriteId":{
+    "name":"spr_botao_pequeno",
+    "path":"sprites/spr_botao_pequeno/spr_botao_pequeno.yy",
+  },
+  "spriteMaskId":null,
+  "visible":true,
+}
