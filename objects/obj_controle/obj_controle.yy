@@ -9,8 +9,8 @@
   "name":"obj_controle",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Guaxinins",
+    "path":"folders/Objects/Guaxinins.yy",
   },
   "parentObjectId":null,
   "persistent":false,

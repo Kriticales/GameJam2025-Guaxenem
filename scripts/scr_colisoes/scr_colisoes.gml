@@ -89,8 +89,15 @@ function col_caixah(_instance = obj_caixa)
 {
 	var _check1 = false;
 	var _check2 = false;
-	if(keyboard_check(action_key))
+	if(keyboard_check(action_key) && object_index == obj_rex)
 	{
+		if(estado != "LIVRE")
+		{
+			return;
+		}
+		
+		estado = "LIVRE"
+		
 		var _caixa = instance_place(x + h_vel, y, _instance);
 
 		if(_caixa != noone)
@@ -105,7 +112,7 @@ function col_caixah(_instance = obj_caixa)
 				
 					col_defh(obj_caixa)
 					col_defh(obj_solido)
-				
+					
 					x += h_vel;
 				}
 				_check1 = true;
@@ -128,7 +135,7 @@ function col_caixah(_instance = obj_caixa)
 					col_defh(obj_caixa)
 					col_defh(obj_solido)
 					col_defh(obj_player)
-				
+					
 					x += h_vel;
 				}
 				
@@ -136,16 +143,25 @@ function col_caixah(_instance = obj_caixa)
 				estado = "PUXANDO"
 			}
 		}
-		else
-		{
-			if(!_check1 && !_check1)
-			{
-				estado = "LIVRE"	
-			}
-		}
 	}
-	else
+	
+	if(place_meeting(x, y + max(1, v_vel), _instance))
 	{
-		estado = "LIVRE"	
+		
 	}
 }
+
+//PARA O BOLOTA
+function col_bolota(_instance = obj_bolota)
+	{	
+		var _pixel_check = 1;
+		
+		
+		if(place_meeting(x , y + v_vel, obj_bolota))
+		{
+			if(obj_bolota.estado == "TRAMPOLIM")
+			{
+				v_vel = -20
+			}
+		}	
+	}

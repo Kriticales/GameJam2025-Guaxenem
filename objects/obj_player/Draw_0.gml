@@ -7,6 +7,4 @@ if(global.debug)
 	draw_circle(x, y, action_area, true)
 	draw_set_color(c_white)
 }
-
-
 draw_self();
