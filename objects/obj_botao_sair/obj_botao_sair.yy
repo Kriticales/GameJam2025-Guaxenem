@@ -10,8 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"propertyId":{"name":"texto_dos_botao","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Sair",},
   ],
   "parent":{
-    "name":"Sistema",
-    "path":"folders/Objects/Sistema.yy",
+    "name":"Botoes e Menu",
+    "path":"folders/Objects/Sistema/Botoes e Menu.yy",
   },
   "parentObjectId":{
     "name":"obj_botao_pai",

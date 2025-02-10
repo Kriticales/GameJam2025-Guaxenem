@@ -9,8 +9,8 @@
   "name":"obj_camera",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sistema",
-    "path":"folders/Objects/Sistema.yy",
+    "name":"Botoes e Menu",
+    "path":"folders/Objects/Sistema/Botoes e Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

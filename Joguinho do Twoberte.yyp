@@ -18,6 +18,8 @@
     {"$GMFolder":"","%Name":"Guaxinins","folderPath":"folders/Objects/Guaxinins.yy","name":"Guaxinins","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Interativos","folderPath":"folders/Objects/Interativos.yy","name":"Interativos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sistema","folderPath":"folders/Objects/Sistema.yy","name":"Sistema","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Botoes e Menu","folderPath":"folders/Objects/Sistema/Botoes e Menu.yy","name":"Botoes e Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Controle e Camera","folderPath":"folders/Objects/Sistema/Controle e Camera.yy","name":"Controle e Camera","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
