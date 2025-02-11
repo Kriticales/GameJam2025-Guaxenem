@@ -63,6 +63,8 @@
     {"id":{"name":"obj_rex","path":"objects/obj_rex/obj_rex.yy",},},
     {"id":{"name":"obj_sistema","path":"objects/obj_sistema/obj_sistema.yy",},},
     {"id":{"name":"obj_solido","path":"objects/obj_solido/obj_solido.yy",},},
+    {"id":{"name":"Object19","path":"objects/Object19/Object19.yy",},},
+    {"id":{"name":"Object20","path":"objects/Object20/Object20.yy",},},
     {"id":{"name":"rm_intro","path":"rooms/rm_intro/rm_intro.yy",},},
     {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
