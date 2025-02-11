@@ -1,18 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"obj_botao_pai",
+  "%Name":"obj_botao_teste",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_botao_pai",
-  "overriddenProperties":[],
+  "name":"obj_botao_teste",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"propertyId":{"name":"texto_dos_botao","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"T",},
+  ],
   "parent":{
     "name":"Botoes e Menu",
     "path":"folders/Objects/Sistema/Botoes e Menu.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_botao_pai",
+    "path":"objects/obj_botao_pai/obj_botao_pai.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,13 +30,14 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"texto_dos_botao","filters":[],"listItems":[],"multiselect":false,"name":"texto_dos_botao","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_botao_pequeno",
+    "path":"sprites/spr_botao_pequeno/spr_botao_pequeno.yy",
+  },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
