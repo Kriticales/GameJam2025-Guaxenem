@@ -1,6 +1,6 @@
 {
   "$GMSequence":"",
-  "%Name":"sq_intro",
+  "%Name":"sq_intro_FODA",
   "autoRecord":true,
   "backdropHeight":720,
   "backdropImageOpacity":0.5,
@@ -24,7 +24,7 @@
     "resourceType":"KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion":"2.0",
   },
-  "name":"sq_intro",
+  "name":"sq_intro_FODA",
   "parent":{
     "name":"Sequences",
     "path":"folders/Sequences.yy",

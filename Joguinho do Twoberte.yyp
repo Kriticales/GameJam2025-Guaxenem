@@ -70,7 +70,7 @@
     {"id":{"name":"scr_colisoes","path":"scripts/scr_colisoes/scr_colisoes.yy",},},
     {"id":{"name":"scr_global","path":"scripts/scr_global/scr_global.yy",},},
     {"id":{"name":"scr_movimentos","path":"scripts/scr_movimentos/scr_movimentos.yy",},},
-    {"id":{"name":"sq_intro","path":"sequences/sq_intro/sq_intro.yy",},},
+    {"id":{"name":"sq_intro_FODA","path":"sequences/sq_intro_FODA/sq_intro_FODA.yy",},},
     {"id":{"name":"spr_mitsu","path":"sounds/spr_mitsu/spr_mitsu.yy",},},
     {"id":{"name":"spr_zefi","path":"sounds/spr_zefi/spr_zefi.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
