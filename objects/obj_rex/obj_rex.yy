@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_guaxinim2_idle",
-    "path":"sprites/spr_guaxinim2_idle/spr_guaxinim2_idle.yy",
+    "name":"spr_rex_idle",
+    "path":"sprites/spr_rex_idle/spr_rex_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

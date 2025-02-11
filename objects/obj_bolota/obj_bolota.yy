@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_guaxinim3_idle",
-    "path":"sprites/spr_guaxinim3_idle/spr_guaxinim3_idle.yy",
+    "name":"spr_bolota_idle",
+    "path":"sprites/spr_bolota_idle/spr_bolota_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
