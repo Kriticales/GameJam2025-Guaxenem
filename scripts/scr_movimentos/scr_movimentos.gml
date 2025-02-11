@@ -2,49 +2,6 @@
 	//CONTROLE DO PLAYER
 	function control()
 	{
-		#region MOVIMENTAÇÃO HORIZONTAL
-			//Variável de Esquerda (verdadeiro se Esquerda OU A pressionado)
-			var _esquerda = keyboard_check(vk_left) || keyboard_check(ord("A"));
-		
-			//Variável de Direita (verdadeiro se Direita OU D pressionado)
-			var _direita = keyboard_check(vk_right) || keyboard_check(ord("D"));
-		
-			//Direção do Movimento. (Direita - Esquerda, onde -1 esqueda, 0 parado, 1 direita)
-			var _mover = (_direita - _esquerda);
-		
-			//SE o objeto se move
-			if(_mover != 0 && !dashing)
-			{
-				//Acelera a velocidade horizontal na direção do comando
-				h_vel += _mover * h_acel;
-			
-				//Limita a velocidade horizontal
-				h_vel = clamp(h_vel, -max_vel, max_vel);
-			}
-			//se o objeto NÃO se move
-			else if(!dashing)
-			{
-				//Checa se existe velocidade para direita (positiva)
-				if(h_vel > h_dcel)
-				{
-					//Desacelera
-					h_vel -= h_dcel;
-				}
-				
-				//Checa se existe velocidade para esquerda (negativa)
-				else if(h_vel < -h_dcel)
-				{
-					//Desacelera
-					h_vel += h_dcel;
-				}
-				
-				//Zera a velocidade
-				else
-				{
-					h_vel = 0; //Zera a velocidade
-				}
-			}
-		#endregion
 		
 		#region CHECANDO O DASH
 			dash_c_timer -= 1; //Reduz o timer em 1 por tick
@@ -208,6 +165,12 @@
 		
 		//adiciona velocidade vertical ao Y
 		y += v_vel;
+		
+		if(h_vel < 0 || h_vel > 1)
+		{
+			//se Vel negativa, PULOU
+			estado = "ANDA";
+		}
 		
 		//controla o estado do pulo;
 		if(v_vel < 0)

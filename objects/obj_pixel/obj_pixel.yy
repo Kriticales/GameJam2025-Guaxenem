@@ -4,7 +4,10 @@
   "eventList":[],
   "managed":true,
   "name":"obj_pixel",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"idle_spr","path":"objects/obj_player/obj_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_pixel_idle",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"jump_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_pixel_jump","path":"sprites/spr_pixel_jump/spr_pixel_jump.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_pixel_jump",},
+  ],
   "parent":{
     "name":"Guaxinins",
     "path":"folders/Objects/Guaxinins.yy",
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_guaxinim1_idle",
-    "path":"sprites/spr_guaxinim1_idle/spr_guaxinim1_idle.yy",
+    "name":"spr_pixel_idle",
+    "path":"sprites/spr_pixel_idle/spr_pixel_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

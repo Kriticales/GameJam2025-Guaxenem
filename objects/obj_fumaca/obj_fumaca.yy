@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_guaxinim4_idle",
-    "path":"sprites/spr_guaxinim4_idle/spr_guaxinim4_idle.yy",
+    "name":"spr_fumaca_idle",
+    "path":"sprites/spr_fumaca_idle/spr_fumaca_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
