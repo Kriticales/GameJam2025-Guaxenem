@@ -6,6 +6,9 @@
 		PARADO,
 		MOVENDO,
 		DASH,
+		HOLD,
+		PUXANDO,
+		EMPURRANDO
 	}
 
 	//--------------ACELERAÇÕES
@@ -38,8 +41,8 @@
 	//--------------CONTROLE
 	
 	dir = 0; //direção do dash
-	carga_dash = 1;
-	tem_dash = carga_dash;
+	carga_dash = 1; //cargas do dash
+	tem_dash = carga_dash; //contador do dash
 	
 	action_key = vk_shift;	//tecla de ação
 	
@@ -49,7 +52,11 @@
 	xscale = 1;	//Escala X da imagem
 	yscale = 1;	//Escala Y da imagem
 	
-	facing = 1;
+	facing = 1; //direção que está olhando
+	hold = noone; //está segurando caixa
+	hold_side = facing; //De qual lado estava o objeto
+	
+	desenha_linha = noone;
 	
 #endregion
 
@@ -86,4 +93,48 @@
 		}
 	}
 
+	empurra_puxa = function(_velocidade, _action_key_release, _jump)
+	{
+		var _collision = collision_line(x, y - (sprite_height/2), x + (sprite_width * hold_side), y - (sprite_height/2), obj_caixa, false, true);
+			
+			desenha_linha = _collision;
+			
+			gravidade();
+			velh = _velocidade;
+			velh = clamp(velh, -(max_velh/3), (max_velh/3))
+			
+			if(hold != noone)
+			{
+				hold.velh = velh;
+			}
+			
+			if(_collision == noone && hold == noone)
+			{
+				estado = STATE.PARADO;
+			}
+			
+			if((_collision != hold && hold != noone))
+			{
+				hold.velh = 0;
+				hold = noone;
+				estado = STATE.PARADO;
+			}
+			
+			if(_jump && (chao || kyote_timer) && hold != noone)
+			{
+				//define a velocidade vertical do pulo
+				velv = -max_velv
+				hold.velh = 0;
+				kyote_timer = 0;
+				hold = noone;
+				estado = STATE.MOVENDO;
+			}
+			
+			if(_action_key_release && hold != noone)
+			{
+				hold.velh = 0;
+				hold = noone;
+				estado = STATE.PARADO;
+			}
+	}
 #endregion

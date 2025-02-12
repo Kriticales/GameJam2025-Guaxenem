@@ -1,8 +1,3 @@
-v_vel += grav;
+velv += grav
 
-col_defv(obj_solido)
-col_defv(obj_caixa)
-col_defv(obj_player)
-col_ghost(obj_plataforma)
-
-y += v_vel;
+velv = clamp(velv, -max_velv, max_velv)

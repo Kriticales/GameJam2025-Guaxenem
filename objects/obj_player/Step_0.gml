@@ -14,8 +14,11 @@
 	//Variável de Pulo (Baixo)
 	var _jump2 = keyboard_check_released(vk_space);
 	
-	//Variável de Pulo (Baixo)
-	var _dash = keyboard_check_pressed(action_key);
+	//Action Key (Baixo)
+	var _action_key_press = keyboard_check_pressed(action_key);
+	
+	//Action Key (Solta)
+	var _action_key_release = keyboard_check_released(action_key);
 		
 	//Direção do Movimento. (Direita - Esquerda, onde -1 esqueda, 0 parado, 1 direita)
 	var _velocidade = (_direita - _esquerda) * max_velh;
@@ -24,7 +27,9 @@
 #region CONTROLE VERTICAL
 
 	//Atualizando o chao (existe chão?)
-	chao = place_meeting(x, y + max(1, velv), obj_solido);
+	chao =
+	place_meeting(x, y + max(1, velv), obj_solido) ||
+	place_meeting(x, y + max(1, velv), obj_caixa);
 	
 	//se tiver chão
 	if(chao){
@@ -85,7 +90,25 @@
 				estado = STATE.MOVENDO;	
 			}
 			
-			dash(_dash);
+			
+			//Estado de dash
+			dash(_action_key_press);
+			
+			
+			//Estado de Push/Pull
+			if(_action_key_press)
+			{
+				var _collision = collision_line(x, y-(sprite_height/2), x+(15 * facing), y-(sprite_height/2), obj_caixa, false, true)
+				if(_collision != noone)
+				{
+					estado = STATE.HOLD;
+					hold = _collision;
+					hold_side = sign(facing);
+				}
+			}
+			//--------------SPRITE CONTROL
+			
+			sprite_index = idle_spr;
 		break;
 	
 		case STATE.MOVENDO:
@@ -131,7 +154,7 @@
 				velv *= 0.7;
 			}
 			
-			dash(_dash);
+			dash(_action_key_press);
 			
 			if(abs(velh) > -0.5 && abs(velh) < 0.5 && abs(velv) == 0)
 			{
@@ -145,6 +168,17 @@
 			else
 			{
 				sprite_index = idle_spr;
+			}
+			//Estado de Push/Pull
+			if(_action_key_press && chao)
+			{
+				var _collision = collision_line(x, y-(sprite_height/2), x+(15 * facing), y-(sprite_height/2), obj_caixa, false, true)
+				if(_collision != noone)
+				{
+					estado = STATE.HOLD;
+					hold = _collision;
+					hold_side = sign(facing);
+				}
 			}
 			
 		break;
@@ -168,6 +202,78 @@
 			}
 			
 		break;
+		
+		case STATE.HOLD:
+			
+			//CONFIGURA OS EMPURRÕES
+			empurra_puxa(_velocidade, _action_key_release, _jump)
+			
+			
+			//MUDA O ESTADO DE ACORDO COM O PUXÃO
+			if(sign(velh) != hold_side && abs(velh) > 0)
+			{
+				estado = STATE.PUXANDO;
+			}
+			if(sign(velh) == hold_side && abs(velh) > 0)
+			{
+				estado = STATE.EMPURRANDO;
+			}
+			
+			//--------------SPRITE CONTROL
+			//mudando sprite
+			sprite_index = spr_rex_idle_push;
+			
+			//settando a direção
+			xscale = hold_side;
+			
+		break;
+		case STATE.PUXANDO:
+		
+			//CONFIGURA OS EMPURRÕES
+			empurra_puxa(_velocidade, _action_key_release, _jump)
+			
+			
+			//MUDA O ESTADO DE ACORDO COM O PUXÃO
+			if(velh == 0)
+			{
+				estado = STATE.HOLD;
+			}
+			else if(sign(velh) == hold_side)
+			{
+				estado = STATE.EMPURRANDO;
+			}
+			
+			//--------------SPRITE CONTROL
+			//mudando sprite
+			sprite_index = spr_rex_pull;
+			
+			//settando a direção
+			xscale = -hold_side;
+			
+		break;
+		case STATE.EMPURRANDO:
+		
+			//CONFIGURA OS EMPURRÕES
+			empurra_puxa(_velocidade, _action_key_release, _jump)
+			
+		
+			//MUDA O ESTADO DE ACORDO COM O PUXÃO
+			if(velh == 0)
+			{
+				estado = STATE.HOLD;
+			}
+			else if(sign(velh) != hold_side)
+			{
+				estado = STATE.PUXANDO;
+			}
+			
+			//--------------SPRITE CONTROL
+			//mudando sprite
+			sprite_index = spr_rex_push;
+			
+			//settando a direção
+			xscale = hold_side;
+		break;
 	
 	}
 #endregion
@@ -179,7 +285,10 @@
 		facing = sign(velh);
 	}
 
-	xscale = lerp(xscale, facing, 0.2); //Reset de imagem X
+	if(estado != STATE.HOLD && estado != STATE.PUXANDO && estado != STATE.EMPURRANDO)
+	{
+		xscale = lerp(xscale, facing, 0.2); //Reset de imagem X
+	}
 	yscale = lerp(yscale, 1, 0.2); //Reset de imagem Y
 	velv = clamp(velv, -max_velv, max_velv) //Limitando Velocidade
 
@@ -197,6 +306,15 @@
 		break;
 		case STATE.DASH:
 			show_debug_message("DASH")
+		break;
+		case STATE.HOLD:
+			show_debug_message("HOLD")
+		break;
+		case STATE.EMPURRANDO:
+			show_debug_message("EMPURRANDO")
+		break;
+		case STATE.PUXANDO:
+			show_debug_message("PUXANDO")
 		break;
 	}
 

@@ -5,8 +5,10 @@
   "managed":true,
   "name":"obj_pixel",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"idle_spr","path":"objects/obj_player/obj_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_pixel_idle",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"idle_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_pixel_idle","path":"sprites/spr_pixel_idle/spr_pixel_idle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_pixel_idle",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"jump_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_pixel_jump","path":"sprites/spr_pixel_jump/spr_pixel_jump.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_pixel_jump",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"walk_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_pixel_walk","path":"sprites/spr_pixel_walk/spr_pixel_walk.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_pixel_walk",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"action_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_pixel_action","path":"sprites/spr_pixel_action/spr_pixel_action.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_pixel_action",},
   ],
   "parent":{
     "name":"Guaxinins",

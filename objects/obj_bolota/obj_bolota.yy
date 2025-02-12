@@ -4,7 +4,12 @@
   "eventList":[],
   "managed":true,
   "name":"obj_bolota",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"action_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_bolota_lay","path":"sprites/spr_bolota_lay/spr_bolota_lay.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_bolota_lay",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"jump_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_bolota_jump","path":"sprites/spr_bolota_jump/spr_bolota_jump.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_bolota_jump",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"idle_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_bolota_idle","path":"sprites/spr_bolota_idle/spr_bolota_idle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_bolota_idle",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"walk_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_bolota_walk","path":"sprites/spr_bolota_walk/spr_bolota_walk.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_bolota_walk",},
+  ],
   "parent":{
     "name":"Guaxinins",
     "path":"folders/Objects/Guaxinins.yy",

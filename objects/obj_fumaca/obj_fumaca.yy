@@ -1,12 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"obj_fumaca",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_fumaca",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"action_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_fumaca_dash","path":"sprites/spr_fumaca_dash/spr_fumaca_dash.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_fumaca_dash",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"jump_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_fumaca_jump","path":"sprites/spr_fumaca_jump/spr_fumaca_jump.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_fumaca_jump",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"idle_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_fumaca_idle","path":"sprites/spr_fumaca_idle/spr_fumaca_idle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_fumaca_idle",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"walk_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_fumaca_walk","path":"sprites/spr_fumaca_walk/spr_fumaca_walk.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_fumaca_walk",},
+  ],
   "parent":{
     "name":"Guaxinins",
     "path":"folders/Objects/Guaxinins.yy",
