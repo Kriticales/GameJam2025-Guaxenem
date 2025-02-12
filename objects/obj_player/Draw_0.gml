@@ -11,5 +11,3 @@ if(global.debug)
 	draw_text(x, y - sprite_height * 3, image_index)
 	draw_set_halign(-1)
 }
-
-draw_text(x + sprite_width * 2, y, velv)

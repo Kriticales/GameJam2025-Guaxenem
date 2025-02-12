@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_caminho_plataforma",
+  "%Name":"obj_switch",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_caminho_plataforma",
+  "name":"obj_switch",
   "overriddenProperties":[],
   "parent":{
     "name":"Interativos",
@@ -26,16 +27,15 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"plataforma_ID","filters":[],"listItems":[],"multiselect":false,"name":"plataforma_ID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":4,},
-    {"$GMObjectProperty":"v1","%Name":"inicio","filters":[],"listItems":[],"multiselect":false,"name":"inicio","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"bloco_linkado","filters":[],"listItems":[],"multiselect":false,"name":"bloco_linkado","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_point",
-    "path":"sprites/spr_point/spr_point.yy",
+    "name":"spr_poeira",
+    "path":"sprites/spr_poeira/spr_poeira.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

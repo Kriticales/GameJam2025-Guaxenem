@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_solido",
+  "%Name":"obj_fragmento",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_solido",
+  "name":"obj_fragmento",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interativos",
-    "path":"folders/Objects/Interativos.yy",
+    "name":"Sistema",
+    "path":"folders/Objects/Sistema.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ground",
-    "path":"sprites/spr_ground/spr_ground.yy",
+    "name":"spr_fragmento",
+    "path":"sprites/spr_fragmento/spr_fragmento.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -9,7 +9,8 @@
 		HOLD,
 		PUXANDO,
 		EMPURRANDO,
-		TRAMPOLIM
+		TRAMPOLIM,
+		SMASH
 	}
 
 	//--------------ACELERAÇÕES
@@ -66,6 +67,10 @@
 	estado_string = ""; //debug da state machine
 	
 	
+	//PLATAFORMAS
+	on_plat = false;	//minha plataforma
+	
+	
 #endregion
 
 #region MÉTODOS
@@ -90,16 +95,6 @@
 				estado = STATE.DASH;
 			}
 	}
-	
-	abaixar = function(_baixo)
-	{
-		if(chao && _baixo && object_index == obj_fumaca)
-		{
-			xscale = facing * 1.3;
-			yscale = 0.7;
-			image_yscale = 0.7;
-		}
-	}
 
 	empurra_puxa = function(_velocidade, _action_key_release, _jump)
 	{
@@ -112,6 +107,7 @@
 			if(hold != noone)
 			{
 				hold.velh = velh;
+				hold.held = true;
 			}
 			
 			if(_collision == noone && hold == noone)
@@ -122,6 +118,7 @@
 			if((_collision != hold && hold != noone))
 			{
 				hold.velh = 0;
+				hold.held = false;
 				hold = noone;
 				estado = STATE.PARADO;
 			}
@@ -129,6 +126,7 @@
 			if((!chao && hold != noone))
 			{
 				hold.velh = 0;
+				hold.held = false;
 				hold = noone;
 				estado = STATE.PARADO;
 			}
@@ -138,6 +136,7 @@
 				//define a velocidade vertical do pulo
 				velv = -max_velv
 				hold.velh = 0;
+				hold.held = false;
 				kyote_timer = 0;
 				hold = noone;
 				estado = STATE.MOVENDO;
@@ -146,6 +145,7 @@
 			if(_action_key_release && hold != noone)
 			{
 				hold.velh = 0;
+				hold.held = false;
 				hold = noone;
 				estado = STATE.PARADO;
 			}

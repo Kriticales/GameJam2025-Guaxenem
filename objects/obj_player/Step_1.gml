@@ -1,5 +1,8 @@
 //Checa se existe um chão
-var _chao = place_meeting(x, y + max(1, velv), obj_solido);
+var _chao =
+place_meeting(x, y + max(1, velv), obj_solido)
+||place_meeting(x, y + max(1, velv), obj_caixa)
+||place_meeting(x, y + max(1, velv), obj_player)
 
 //Compara o chão atual com o passado
 if(_chao && !chao)
