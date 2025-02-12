@@ -13,7 +13,6 @@
     {"name":"inst_7831F2E","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_332D3571","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_E4A263A","path":"rooms/rm_level1/rm_level1.yy",},
-    {"name":"inst_3D9B8C2B","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_561C9991","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_75156692","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_32259E87","path":"rooms/rm_level1/rm_level1.yy",},
@@ -45,7 +44,6 @@
     {"$GMRInstanceLayer":"","%Name":"Funcionamento_do_Jogo","depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_332D3571","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_332D3571","objectId":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":-16.0,},
         {"$GMRInstance":"v1","%Name":"inst_E4A263A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_E4A263A","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":16.0,"y":-16.0,},
-        {"$GMRInstance":"v1","%Name":"inst_3D9B8C2B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3D9B8C2B","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":-16.0,},
         {"$GMRInstance":"v1","%Name":"inst_594E12BE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_594E12BE","objectId":{"name":"obj_reset","path":"objects/obj_reset/obj_reset.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":48.0,"y":-16.0,},
       ],"layers":[],"name":"Funcionamento_do_Jogo","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Cenarios_e_Blocos_Solidos","depth":300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
