@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_menu",
+  "%Name":"fnt_cutscene",
   "AntiAlias":0,
   "applyKerning":0,
   "ascender":50,
@@ -674,7 +674,7 @@
   "last":0,
   "lineHeight":60,
   "maintainGms1Font":false,
-  "name":"fnt_menu",
+  "name":"fnt_cutscene",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",
