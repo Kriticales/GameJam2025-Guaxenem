@@ -2,52 +2,6 @@
 	//CONTROLE DO PLAYER
 	function control()
 	{
-		
-		#region CHECANDO O DASH
-			dash_c_timer -= 1; //Reduz o timer em 1 por tick
-			
-			//Tecla de ação pressionada?
-			var _key = keyboard_check_pressed(action_key)
-			
-			//Objeto é o fumaça?
-			var _index_obj = object_index == obj_fumaca
-			
-			//timer de cooldown zerou?
-			var _timer = dash_c_timer <= 0
-			
-			//se for o OBJ & Pressionar ação & timer zerou & NÃO está dashando
-			if(_index_obj && _key && _timer && !dashing)
-			{
-				//começa o dash
-				dashing = true;
-				
-				//reseta o cooldown
-				dash_c_timer = dash_cooldown;
-			}
-			
-			//Se está dashando
-			if(dashing)
-			{
-				//reduz o timer do dash
-				dash_timer -= 1
-				
-				//Velocidade = direção * velocidade do dash
-				h_vel = dash_vel * sign(image_xscale);
-				
-				//se o timer do dash zerou
-				if(dash_timer <= 0)
-				{
-					//desliga o dash
-					dashing = false;
-					
-					//reduz a velocidade para 0
-					h_vel = lerp(h_vel, 0, 0.2);
-					
-					//reseta o tempo de dash
-					dash_timer = dash_time;
-				}
-			}
-		#endregion
 			
 		#region SETTANDO ESTADOS DE TRAMPOLIM DO BOLOTA
 			//Qual objeto?

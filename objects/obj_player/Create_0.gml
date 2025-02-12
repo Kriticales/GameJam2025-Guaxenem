@@ -56,7 +56,10 @@
 	hold = noone; //está segurando caixa
 	hold_side = facing; //De qual lado estava o objeto
 	
-	desenha_linha = noone;
+	jump_start = false;
+	
+	estado_string = "";
+	
 	
 #endregion
 
@@ -97,8 +100,6 @@
 	{
 		var _collision = collision_line(x, y - (sprite_height/2), x + (sprite_width * hold_side), y - (sprite_height/2), obj_caixa, false, true);
 			
-			desenha_linha = _collision;
-			
 			gravidade();
 			velh = _velocidade;
 			velh = clamp(velh, -(max_velh/3), (max_velh/3))
@@ -114,6 +115,13 @@
 			}
 			
 			if((_collision != hold && hold != noone))
+			{
+				hold.velh = 0;
+				hold = noone;
+				estado = STATE.PARADO;
+			}
+			
+			if((!chao && hold != noone))
 			{
 				hold.velh = 0;
 				hold = noone;

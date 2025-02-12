@@ -98,7 +98,7 @@
 			//Estado de Push/Pull
 			if(_action_key_press)
 			{
-				var _collision = collision_line(x, y-(sprite_height/2), x+(15 * facing), y-(sprite_height/2), obj_caixa, false, true)
+				var _collision = collision_line(x, y-(sprite_height/2), x+(20 * facing), y-(sprite_height/2), obj_caixa, false, true)
 				if(_collision != noone)
 				{
 					estado = STATE.HOLD;
@@ -178,6 +178,45 @@
 					estado = STATE.HOLD;
 					hold = _collision;
 					hold_side = sign(facing);
+				}
+			}
+			
+			//--------------SPRITE CONTROL
+			//mudando sprite
+			if(abs(velh) > 0.5)
+			{
+				sprite_index = walk_spr;
+			}
+			
+			if(velv < 0)
+			{
+				sprite_index = jump_spr;
+				
+				if(!jump_start)
+				{
+					image_index = 0
+					jump_start = true;
+				}
+				
+				if(image_index >= 5)
+				{
+					image_index = 5
+				}
+			}
+			
+			if(velv > 0)
+			{
+				sprite_index = jump_spr
+				
+				if(!jump_start)
+				{
+					image_index = 5
+					jump_start = true;
+				}
+				
+				if(image_index >= image_number)
+				{
+					image_index = image_number
 				}
 			}
 			
@@ -299,22 +338,22 @@
 	switch(estado)
 	{
 		case STATE.PARADO:
-			show_debug_message("PARADO")
+			estado_string = "PARADO";
 		break;
 		case STATE.MOVENDO:
-			show_debug_message("MOVENDO")
+			estado_string = "MOVENDO";
 		break;
 		case STATE.DASH:
-			show_debug_message("DASH")
+			estado_string = "DASH";
 		break;
 		case STATE.HOLD:
-			show_debug_message("HOLD")
+			estado_string = "HOLD";
 		break;
 		case STATE.EMPURRANDO:
-			show_debug_message("EMPURRANDO")
+			estado_string = "EMPURRANDO";
 		break;
 		case STATE.PUXANDO:
-			show_debug_message("PUXANDO")
+			estado_string = "PUXANDO";
 		break;
 	}
 
