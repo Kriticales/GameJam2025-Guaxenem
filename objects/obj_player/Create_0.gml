@@ -8,7 +8,8 @@
 		DASH,
 		HOLD,
 		PUXANDO,
-		EMPURRANDO
+		EMPURRANDO,
+		TRAMPOLIM
 	}
 
 	//--------------ACELERAÇÕES
@@ -56,9 +57,13 @@
 	hold = noone; //está segurando caixa
 	hold_side = facing; //De qual lado estava o objeto
 	
-	jump_start = false;
+	bolota_jump_force = 1.5; //força de pulo do bolota
 	
-	estado_string = "";
+	trampolim = false; //ignorar o cap de vspeed
+	
+	jump_start = false; //controle de frame pro pulo
+	
+	estado_string = ""; //debug da state machine
 	
 	
 #endregion

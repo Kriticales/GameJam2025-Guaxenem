@@ -40,6 +40,8 @@
 		kyote_timer = kyote_time;
 		//atualizando o dash;
 		tem_dash = carga_dash;
+		
+		trampolim = false;
 	}
 	//se não tiver chão
 	else
@@ -96,7 +98,7 @@
 			
 			
 			//Estado de Push/Pull
-			if(_action_key_press)
+			if(_action_key_press && object_index == obj_rex)
 			{
 				var _collision = collision_line(x, y-(sprite_height/2), x+(20 * facing), y-(sprite_height/2), obj_caixa, false, true)
 				if(_collision != noone)
@@ -105,6 +107,12 @@
 					hold = _collision;
 					hold_side = sign(facing);
 				}
+			}
+			
+			if(_action_key_press && object_index == obj_bolota)
+			{
+				estado = STATE.TRAMPOLIM
+				image_index = 0
 			}
 			//--------------SPRITE CONTROL
 			
@@ -170,7 +178,7 @@
 				sprite_index = idle_spr;
 			}
 			//Estado de Push/Pull
-			if(_action_key_press && chao)
+			if(_action_key_press && chao && object_index == obj_rex)
 			{
 				var _collision = collision_line(x, y-(sprite_height/2), x+(15 * facing), y-(sprite_height/2), obj_caixa, false, true)
 				if(_collision != noone)
@@ -179,6 +187,12 @@
 					hold = _collision;
 					hold_side = sign(facing);
 				}
+			}
+			
+			if(_action_key_press && chao && object_index == obj_bolota)
+			{
+				estado = STATE.TRAMPOLIM
+				image_index = 0
 			}
 			
 			//--------------SPRITE CONTROL
@@ -194,7 +208,7 @@
 				
 				if(!jump_start)
 				{
-					image_index = 0
+					image_index = 0;
 					jump_start = true;
 				}
 				
@@ -216,7 +230,7 @@
 				
 				if(image_index >= image_number)
 				{
-					image_index = image_number
+					image_index = image_number -1
 				}
 			}
 			
@@ -239,6 +253,11 @@
 				velh = (max_velh * sign(velh) * 0.5);
 				velv = (max_velv * sign(velv) * 0.5);
 			}
+			
+			//--------------SPRITE CONTROL
+			//mudando sprite
+			
+			sprite_index = spr_fumaca_dash;
 			
 		break;
 		
@@ -313,6 +332,41 @@
 			//settando a direção
 			xscale = hold_side;
 		break;
+		case STATE.TRAMPOLIM:
+		
+			velh = lerp(velh, 0, 0.2)
+			
+			if(_jump && (chao || kyote_timer))
+			{
+				//define a velocidade vertical do pulo
+				velv = -max_velv
+				kyote_timer = 0;
+				estado = STATE.MOVENDO;
+			}
+			
+			if(_action_key_press)
+			{
+				image_speed = -1;
+			}
+			
+			if(image_speed = -1)
+			{
+				if(image_index <= 1)
+				{
+					estado = STATE.PARADO;
+					image_speed = 1;
+				}
+			}
+		
+			//--------------SPRITE CONTROL
+			//mudando sprite
+			sprite_index = spr_bolota_lay;
+			if(image_index >= 3)
+			{
+				image_index = image_number - 1;
+			}
+			
+		break;
 	
 	}
 #endregion
@@ -329,7 +383,11 @@
 		xscale = lerp(xscale, facing, 0.2); //Reset de imagem X
 	}
 	yscale = lerp(yscale, 1, 0.2); //Reset de imagem Y
-	velv = clamp(velv, -max_velv, max_velv) //Limitando Velocidade
+	
+	if(!trampolim)
+	{
+		velv = clamp(velv, -max_velv, max_velv) //Limitando Velocidade
+	}
 
 #endregion
 
@@ -354,6 +412,9 @@
 		break;
 		case STATE.PUXANDO:
 			estado_string = "PUXANDO";
+		break;
+		case STATE.TRAMPOLIM:
+			estado_string = "TRAMPOLIM";
 		break;
 	}
 
