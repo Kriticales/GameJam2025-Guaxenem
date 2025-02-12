@@ -155,7 +155,7 @@
 				estado_string = "MOVENDO";
 			
 				//Aplica aceleração horizontal
-				velh = lerp(velh, _velocidade, acel)
+				velh = lerp(velh, _velocidade, acel*2)
 	
 				gravidade();
 			
@@ -436,7 +436,9 @@
 				xscale = 0.7 * facing;
 				yscale = 1.3;
 				
-				if(chao)
+				var _caixa = instance_place(x, y + velv, obj_caixa)
+				
+				if(chao && _caixa = noone)
 				{
 					estado = STATE.PARADO;
 				}

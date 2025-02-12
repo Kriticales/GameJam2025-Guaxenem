@@ -17,7 +17,7 @@
 	
 	grav = .3;			//Gravidade
 	acel_chao = .1;		//Aceleração no chao
-	acel_ar = .07;		//Aceleração no ar
+	acel_ar = .06;		//Aceleração no ar
 	acel = acel_chao;	//Aceleração verdadeira
 	
 	//--------------VELOCIDADES
@@ -26,10 +26,6 @@
 	velv = 0;	//Velocidade Y (VERTICAL)
 	
 	//--------------LIMITAÇÕES
-	max_velh = 6;	//Velocidade máxima X (HORIZONTAL)
-	max_velv = 8;	//Velocidade máxima Y (VERTICAL)
-	dash_lenght = 10; //Velocidade máxima Dash
-	
 	kyote_time = 6;				//Setta o coyote time
 	kyote_timer = kyote_time	//Inicia o contador
 	
@@ -57,8 +53,6 @@
 	facing = 1; //direção que está olhando
 	hold = noone; //está segurando caixa
 	hold_side = facing; //De qual lado estava o objeto
-	
-	bolota_jump_force = 1.5; //força de pulo do bolota
 	
 	trampolim = false; //ignorar o cap de vspeed
 	

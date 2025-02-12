@@ -69,13 +69,16 @@
 		velv = 0;
 	}
 	
-	if(place_meeting(x, y + velv, obj_caixa))
-	{
-		while(!place_meeting(x, y + sign(velv), obj_caixa))
+	if(estado != STATE.SMASH)
+	{	
+		if(place_meeting(x, y + velv, obj_caixa))
 		{
-			y += sign(velv);
+			while(!place_meeting(x, y + sign(velv), obj_caixa))
+			{
+				y += sign(velv);
+			}
+			velv = 0;
 		}
-		velv = 0;
 	}
 	//--------------APLICANDO VELOCIDADE
 	y += velv;
