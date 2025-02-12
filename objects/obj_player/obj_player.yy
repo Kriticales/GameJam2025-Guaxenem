@@ -12,8 +12,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sistemas",
-    "path":"folders/Objects/Sistema/Sistemas.yy",
+    "name":"Guaxinins",
+    "path":"folders/Objects/Guaxinins.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -8,7 +8,9 @@
 		DASH,
 		HOLD,
 		PUXANDO,
-		EMPURRANDO
+		EMPURRANDO,
+		TRAMPOLIM,
+		SMASH
 	}
 
 	//--------------ACELERAÇÕES
@@ -56,7 +58,18 @@
 	hold = noone; //está segurando caixa
 	hold_side = facing; //De qual lado estava o objeto
 	
-	desenha_linha = noone;
+	bolota_jump_force = 1.5; //força de pulo do bolota
+	
+	trampolim = false; //ignorar o cap de vspeed
+	
+	jump_start = false; //controle de frame pro pulo
+	
+	estado_string = ""; //debug da state machine
+	
+	
+	//PLATAFORMAS
+	on_plat = false;	//minha plataforma
+	
 	
 #endregion
 
@@ -82,22 +95,10 @@
 				estado = STATE.DASH;
 			}
 	}
-	
-	abaixar = function(_baixo)
-	{
-		if(chao && _baixo && object_index == obj_fumaca)
-		{
-			xscale = facing * 1.3;
-			yscale = 0.7;
-			image_yscale = 0.7;
-		}
-	}
 
 	empurra_puxa = function(_velocidade, _action_key_release, _jump)
 	{
 		var _collision = collision_line(x, y - (sprite_height/2), x + (sprite_width * hold_side), y - (sprite_height/2), obj_caixa, false, true);
-			
-			desenha_linha = _collision;
 			
 			gravidade();
 			velh = _velocidade;
@@ -106,6 +107,7 @@
 			if(hold != noone)
 			{
 				hold.velh = velh;
+				hold.held = true;
 			}
 			
 			if(_collision == noone && hold == noone)
@@ -116,6 +118,15 @@
 			if((_collision != hold && hold != noone))
 			{
 				hold.velh = 0;
+				hold.held = false;
+				hold = noone;
+				estado = STATE.PARADO;
+			}
+			
+			if((!chao && hold != noone))
+			{
+				hold.velh = 0;
+				hold.held = false;
 				hold = noone;
 				estado = STATE.PARADO;
 			}
@@ -125,6 +136,7 @@
 				//define a velocidade vertical do pulo
 				velv = -max_velv
 				hold.velh = 0;
+				hold.held = false;
 				kyote_timer = 0;
 				hold = noone;
 				estado = STATE.MOVENDO;
@@ -133,6 +145,7 @@
 			if(_action_key_release && hold != noone)
 			{
 				hold.velh = 0;
+				hold.held = false;
 				hold = noone;
 				estado = STATE.PARADO;
 			}

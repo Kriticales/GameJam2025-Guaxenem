@@ -60,3 +60,20 @@
 	//--------------APLICANDO VELOCIDADE
 	x += velh
 #endregion
+
+var _play = collision_rectangle(x-5- (sprite_width/2), y-5- (sprite_height/2), x+5+ (sprite_width/2), y+5+ (sprite_height/2), obj_player, false, true)
+	if(_play)
+	{
+		if(_play.estado == STATE.SMASH || _play.estado == STATE.DASH)
+		{
+			instance_destroy()
+			
+			var _smash = irandom_range(10, 30)
+			for(var i = 0; i < _smash; i++)
+			{
+				var xx = random_range(x - sprite_width/2, x + sprite_width/2)
+		
+				instance_create_depth(xx, y, -100, obj_fragmento)
+			}
+		}
+	}

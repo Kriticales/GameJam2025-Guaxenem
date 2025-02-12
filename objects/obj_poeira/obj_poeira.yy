@@ -9,8 +9,8 @@
   "name":"obj_poeira",
   "overriddenProperties":[],
   "parent":{
-    "name":"Guaxinins",
-    "path":"folders/Objects/Guaxinins.yy",
+    "name":"Sistema",
+    "path":"folders/Objects/Sistema.yy",
   },
   "parentObjectId":null,
   "persistent":false,

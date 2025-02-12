@@ -4,3 +4,4 @@ grav = .5
 velh = 0;
 velv = 0;
 max_velv = 12;
+held = false;
