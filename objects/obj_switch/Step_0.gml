@@ -4,6 +4,12 @@ var _play = collision_rectangle(x - sprite_width, y - sprite_height, x + sprite_
 	{
 		if(keyboard_check_pressed(ord("F")))
 		{
-			bloco_linkado.active = !bloco_linkado.active;
+			with(obj_solido_switch)
+			{
+				if(controle == other.bloco_linkado)
+				{
+					active = !active;
+				}
+			}
 		}
 	}

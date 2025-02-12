@@ -117,6 +117,7 @@
     {"id":{"name":"spr_rex_pull","path":"sprites/spr_rex_pull/spr_rex_pull.yy",},},
     {"id":{"name":"spr_rex_push","path":"sprites/spr_rex_push/spr_rex_push.yy",},},
     {"id":{"name":"spr_rex_walk","path":"sprites/spr_rex_walk/spr_rex_walk.yy",},},
+    {"id":{"name":"spr_switch","path":"sprites/spr_switch/spr_switch.yy",},},
     {"id":{"name":"spr_tileset","path":"sprites/spr_tileset/spr_tileset.yy",},},
     {"id":{"name":"ts_set1","path":"tilesets/ts_set1/ts_set1.yy",},},
   ],
