@@ -80,7 +80,7 @@ var _play = collision_rectangle(x+6-(sprite_width/2), y-5- (sprite_height/2), x-
 		}
 	}
 	
-	_play = collision_rectangle(x-5- (sprite_width/2), y-5- (sprite_height/2), x+5+ (sprite_width/2), y+5+ (sprite_height/2), obj_player, false, true)
+	_play = collision_rectangle(x-5- (sprite_width/2), y- (sprite_height/2), x+5+ (sprite_width/2), y+ (sprite_height/2), obj_player, false, true)
 	
 	if(_play)
 	{

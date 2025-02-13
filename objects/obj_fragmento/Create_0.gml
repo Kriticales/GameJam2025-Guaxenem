@@ -1,4 +1,4 @@
-image_index = irandom_range(0, 4)
+image_index = irandom_range(0, image_number-1)
 image_xscale = random_range(0.25, 1)
 image_yscale = image_xscale;
 rot = irandom_range(2, 6)
