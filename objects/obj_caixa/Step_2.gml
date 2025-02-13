@@ -21,11 +21,24 @@
 	
 	if(place_meeting(x, y + velv, obj_player))
 	{
-		while(!place_meeting(x, y + sign(velv), obj_player))
+		var _player = instance_place(x, y + velv, obj_player);
+		
+		if(_player.estado == STATE.TRAMPOLIM)
 		{
-			y += sign(velv);
+			velv = -(max_velv * _player.bolota_jump_force);
+			_player.xscale = 1.3 * _player.facing;
+			_player.yscale = 0.7;
+			trampolim = true;
 		}
-		velv = 0;
+		else
+		{
+			trampolim = false;
+			while(!place_meeting(x, y + sign(velv), obj_player))
+			{
+				y += sign(velv);
+			}
+			velv = 0;
+		}
 	}
 
 	//--------------APLICANDO VELOCIDADE

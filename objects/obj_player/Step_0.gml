@@ -4,6 +4,9 @@
 		
 	//Variável de Direita (verdadeiro se Direita OU D pressionado)
 	var _direita = keyboard_check(vk_right) || keyboard_check(ord("D"));
+	
+	//Variável de Descer (verdadeiro se Baixo OU S pressionado)
+	var _desce = keyboard_check(vk_down) || keyboard_check(ord("S"))
 
 	//Variável de Pulo (Alto)
 	var _jump = keyboard_check_pressed(vk_space);
@@ -27,6 +30,8 @@
 		
 		//Variável de Direita (verdadeiro se Direita OU D pressionado)
 		_direita = 0;
+		
+		_desce = 0;
 
 		//Variável de Pulo (Alto)
 		_jump = 0;
@@ -45,12 +50,21 @@
 		
 #region CONTROLE VERTICAL
 
+	var _plat = instance_place(x, y + max(1, velv), obj_plataforma);
+	var _is_on_plat = (_plat && bbox_bottom <= _plat.bbox_top+2) && !_desce
+	
 	//Atualizando o chao (existe chão?)
 	chao =
 	place_meeting(x, y + max(1, velv), obj_solido) ||
 	place_meeting(x, y + max(1, velv), obj_player) ||
-	place_meeting(x, y + max(1, velv), obj_plataforma) ||
+	_is_on_plat ||
 	place_meeting(x, y + max(1, velv), obj_caixa);
+	
+	if(_desce && (_plat && bbox_bottom <= _plat.bbox_top+2))
+	{
+		y += grav*2;
+		velv = grav*3;
+	}
 	
 	var _inst = instance_place(x, y + max(1, velv), obj_solido_switch)
 	
@@ -100,11 +114,8 @@
 		case STATE.PARADO:
 			estado_string = "PARADO";
 	
-			if(!place_meeting(x, y + max(1, velv), obj_plataforma))
-			{
-				velv = 0; //Zera velocidade vertical
-				velh = 0; //Zera velocidade horizontal
-			}
+			velv = 0; //Zera velocidade vertical
+			velh = 0; //Zera velocidade horizontal
 		
 			//checa se o player pulou & está no chão
 			if(_jump && (chao))

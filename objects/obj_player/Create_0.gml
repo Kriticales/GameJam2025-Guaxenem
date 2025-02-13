@@ -12,7 +12,12 @@
 		TRAMPOLIM,
 		SMASH
 	}
-
+	
+	pop = true;
+	pop_dash = true;
+	pop_time = 5;
+	pop_timer = pop_time
+	
 	//--------------ACELERAÇÕES
 	
 	grav = .3;			//Gravidade
@@ -59,10 +64,6 @@
 	jump_start = false; //controle de frame pro pulo
 	
 	estado_string = ""; //debug da state machine
-	
-	
-	//PLATAFORMAS
-	on_plat = false;	//minha plataforma
 	
 	
 #endregion

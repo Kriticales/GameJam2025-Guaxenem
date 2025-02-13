@@ -9,8 +9,8 @@
   "name":"obj_fase_1_controle",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sistemas",
-    "path":"folders/Objects/Sistema/Sistemas.yy",
+    "name":"Fase1",
+    "path":"folders/Objects/Fase1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

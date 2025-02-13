@@ -1,16 +1,21 @@
 #region MOVIMENTAÇÃO VERTICAL
 
 	//--------------COLISÕES
-	var _plat = instance_place(x, y + max_velv, obj_plataforma);
-	if(_plat && bbox_bottom <= _plat.bbox_top + 1)
+	var _plat = instance_place(x, y + max(1, velv), obj_plataforma);
+	
+	var _desce = keyboard_check(vk_down) || keyboard_check(ord("S"))
+	if(!_desce)
 	{
-		if(place_meeting(x, y + velv, obj_plataforma))
+		if(velv > 0 && _plat && (bbox_bottom <= _plat.bbox_top + 1) && bbox_top <= _plat.bbox_top)
 		{
-			while(!place_meeting(x, y + sign(velv), obj_plataforma))
+			if(place_meeting(x, y + max(1, velv), obj_plataforma))
 			{
-				y += sign(velv);
+				while(!place_meeting(x, y + sign(velv), obj_plataforma))
+				{
+					y += sign(velv);
+				}
+				velv = 0;
 			}
-			velv = 0;
 		}
 	}
 	
@@ -20,13 +25,14 @@
 		
 		if(_player.estado == STATE.TRAMPOLIM)
 		{
-			velv = -(max_velv * bolota_jump_force);
+			velv = -(max_velv * _player.bolota_jump_force);
 			_player.xscale = 1.3 * _player.facing;
 			_player.yscale = 0.7;
 			trampolim = true;
 		}
 		else
 		{
+			trampolim = false;
 			while(!place_meeting(x, y + sign(velv), obj_player))
 			{
 				y += sign(velv);
@@ -39,32 +45,18 @@
 	
 	if(_inst && _inst.visible)
 	{
-		if(!on_plat)
+		while(!place_meeting(x, y + sign(velv), obj_solido_switch))
 		{
-			while(!place_meeting(x, y + sign(velv), obj_solido_switch))
-			{
-				y += sign(velv);
-			}
-		}
-		else
-		{
-			y += 1
+			y += sign(velv);
 		}
 		velv = 0;
 	}
 	
 	if(place_meeting(x, y + velv, obj_solido))
 	{
-		if(!on_plat)
+		while(!place_meeting(x, y + sign(velv), obj_solido))
 		{
-			while(!place_meeting(x, y + sign(velv), obj_solido))
-			{
-				y += sign(velv);
-			}
-		}
-		else
-		{
-			y += 1
+			y += sign(velv);
 		}
 		velv = 0;
 	}

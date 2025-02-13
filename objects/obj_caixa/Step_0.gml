@@ -35,3 +35,8 @@ if(_plat && bbox_bottom <= _plat.bbox_top + 1)
 			
 	}
 }
+
+if(!trampolim)
+{
+	velv = clamp(velv, -max_velv, max_velv)
+}
