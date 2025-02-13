@@ -1,0 +1,7 @@
+gpu_set_blendmode(bm_add)
+draw_sprite_ext(spr_coin, image_index, x, y, image_xscale * 1.3, image_yscale * 1.3, 0, c_yellow, 0.5)
+gpu_set_blendmode(-1)
+gpu_set_blendmode(bm_add)
+draw_sprite_ext(spr_coin, image_index, x, y, image_xscale * 1.5, image_yscale * 1.5, 0, c_orange, 0.5)
+gpu_set_blendmode(-1)
+draw_self()

@@ -109,6 +109,11 @@
 				estado = STATE.PARADO;
 			}
 			
+			if(hold == noone)
+			{
+				estado = STATE.PARADO;
+			}
+			
 			if((_collision != hold && hold != noone))
 			{
 				hold.velh = 0;

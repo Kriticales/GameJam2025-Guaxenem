@@ -5,4 +5,6 @@ with(obj_solido_switch)
 		other.image_blend = color;
 	}
 }
+image_speed = 0;
+image_index = 0;
 switched = false;

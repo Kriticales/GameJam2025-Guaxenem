@@ -129,4 +129,9 @@
 	}
 	//--------------APLICANDO VELOCIDADE
 	x += velh
+	
+	if(collision_circle(x, y - 3, 1, obj_caixa, false, true))
+	{
+		y -= 32;
+	}
 #endregion
