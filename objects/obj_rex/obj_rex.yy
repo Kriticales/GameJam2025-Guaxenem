@@ -9,6 +9,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"jump_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_rex_jump","path":"sprites/spr_rex_jump/spr_rex_jump.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_rex_jump",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"idle_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_rex_idle","path":"sprites/spr_rex_idle/spr_rex_idle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_rex_idle",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"walk_spr","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_rex_walk","path":"sprites/spr_rex_walk/spr_rex_walk.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_rex_walk",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"max_velv","path":"objects/obj_player/obj_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"7.5",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"max_velh","path":"objects/obj_player/obj_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
     "name":"Guaxinins",

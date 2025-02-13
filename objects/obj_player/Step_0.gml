@@ -155,7 +155,7 @@
 				estado_string = "MOVENDO";
 			
 				//Aplica aceleração horizontal
-				velh = lerp(velh, _velocidade, acel)
+				velh = lerp(velh, _velocidade, acel*2)
 	
 				gravidade();
 			
@@ -294,7 +294,6 @@
 				{
 					estado = STATE.MOVENDO;
 					dash_timer = dash_duration;
-				
 					velh = (max_velh * sign(velh) * 0.5);
 					velv = (max_velv * sign(velv) * 0.5);
 				}
@@ -393,6 +392,8 @@
 		#region TRAMPOLIM
 			case STATE.TRAMPOLIM:
 				estado_string = "TRAMPOLIM";
+				
+				gravidade()
 		
 				velh = lerp(velh, 0, 0.2)
 			
@@ -436,7 +437,9 @@
 				xscale = 0.7 * facing;
 				yscale = 1.3;
 				
-				if(chao)
+				var _caixa = instance_place(x, y + velv, obj_caixa)
+				
+				if(chao && _caixa = noone)
 				{
 					estado = STATE.PARADO;
 				}
@@ -462,5 +465,6 @@
 	{
 		velv = clamp(velv, -max_velv, max_velv) //Limitando Velocidade
 	}
+	image_yscale = lerp(image_yscale, 1, 0.3);
 
 #endregion
