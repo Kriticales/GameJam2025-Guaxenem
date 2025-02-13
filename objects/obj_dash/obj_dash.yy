@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_poeira",
-    "path":"sprites/spr_poeira/spr_poeira.yy",
+    "name":"spr_diamond",
+    "path":"sprites/spr_diamond/spr_diamond.yy",
   },
   "spriteMaskId":null,
   "visible":true,
