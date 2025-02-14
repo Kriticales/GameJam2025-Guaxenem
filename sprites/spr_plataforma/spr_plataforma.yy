@@ -23,7 +23,7 @@
   ],
   "name":"spr_plataforma",
   "nineSlice":null,
-  "origin":4,
+  "origin":7,
   "parent":{
     "name":"Cenário",
     "path":"folders/Sprites/Cenário.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":32,
-    "yorigin":8,
+    "yorigin":16,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
