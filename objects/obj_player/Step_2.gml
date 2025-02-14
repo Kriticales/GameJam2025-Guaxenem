@@ -41,16 +41,20 @@
 		}
 	}
 	
-	var _inst = instance_place(x, y + velv, obj_solido_switch)
-	
-	if(_inst && _inst.visible)
+	var _lista = ds_list_create();
+	var _lista_objs = instance_place_list(x, y + velv, obj_solido_switch, _lista, false);
+	for(var i=0; i < _lista_objs; i++)
 	{
-		while(!place_meeting(x, y + sign(velv), obj_solido_switch))
+		if(_lista[| i] && _lista[| i].visible)
 		{
-			y += sign(velv);
+			while(!place_meeting(x, y + sign(velv), obj_solido_switch))
+			{
+				y += sign(velv);
+			}
+			velv = 0;
 		}
-		velv = 0;
 	}
+	ds_list_destroy(_lista);
 	
 	if(place_meeting(x, y + velv, obj_solido))
 	{
@@ -106,16 +110,21 @@
 		velh = 0;
 	}
 	
-	_inst = instance_place(x + velh, y, obj_solido_switch)
-	
-	if(_inst && _inst.visible)
+	_lista = ds_list_create();
+	_lista_objs = instance_place_list(x + velh, y, obj_solido_switch, _lista, false);
+	for(var i=0; i < _lista_objs; i++)
 	{
-		while(!place_meeting(x + sign(velh), y, obj_solido_switch))
+		if(_lista[| i] && _lista[| i].visible)
+		{
+			while(!place_meeting(x + sign(velh), y, obj_solido_switch))
 		{
 			x += sign(velh);
 		}
 		velh = 0;
+		}
 	}
+	
+	ds_list_destroy(_lista);
 	
 	if(place_meeting(x + velh, y, obj_player))
 	{
