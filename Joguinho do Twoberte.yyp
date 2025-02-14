@@ -60,6 +60,7 @@
     {"id":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},},
     {"id":{"name":"obj_botao_sair","path":"objects/obj_botao_sair/obj_botao_sair.yy",},},
     {"id":{"name":"obj_botao_teste","path":"objects/obj_botao_teste/obj_botao_teste.yy",},},
+    {"id":{"name":"obj_box_pass","path":"objects/obj_box_pass/obj_box_pass.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_caixa","path":"objects/obj_caixa/obj_caixa.yy",},},
     {"id":{"name":"obj_col_1","path":"objects/obj_col_1/obj_col_1.yy",},},
@@ -91,6 +92,7 @@
     {"id":{"name":"rm_cutscene","path":"rooms/rm_cutscene/rm_cutscene.yy",},},
     {"id":{"name":"rm_design","path":"rooms/rm_design/rm_design.yy",},},
     {"id":{"name":"rm_design2","path":"rooms/rm_design2/rm_design2.yy",},},
+    {"id":{"name":"rm_design3","path":"rooms/rm_design3/rm_design3.yy",},},
     {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_nivel1","path":"rooms/rm_nivel1/rm_nivel1.yy",},},
@@ -162,6 +164,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_design3","path":"rooms/rm_design3/rm_design3.yy",},},
     {"roomId":{"name":"rm_design2","path":"rooms/rm_design2/rm_design2.yy",},},
     {"roomId":{"name":"rm_design","path":"rooms/rm_design/rm_design.yy",},},
     {"roomId":{"name":"rm_nivel1","path":"rooms/rm_nivel1/rm_nivel1.yy",},},

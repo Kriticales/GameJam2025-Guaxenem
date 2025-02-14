@@ -1,5 +1,5 @@
 #region VARIÁVEIS
-	global.debug = false;
+	global.debug = true;
 	global.selecionado = 0;
 	global.guaxinim = 
 	[
