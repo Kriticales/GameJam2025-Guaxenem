@@ -93,6 +93,7 @@
     {"id":{"name":"rm_design","path":"rooms/rm_design/rm_design.yy",},},
     {"id":{"name":"rm_design2","path":"rooms/rm_design2/rm_design2.yy",},},
     {"id":{"name":"rm_design3","path":"rooms/rm_design3/rm_design3.yy",},},
+    {"id":{"name":"rm_design4","path":"rooms/rm_design4/rm_design4.yy",},},
     {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_nivel1","path":"rooms/rm_nivel1/rm_nivel1.yy",},},
@@ -164,6 +165,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_design4","path":"rooms/rm_design4/rm_design4.yy",},},
     {"roomId":{"name":"rm_design3","path":"rooms/rm_design3/rm_design3.yy",},},
     {"roomId":{"name":"rm_design2","path":"rooms/rm_design2/rm_design2.yy",},},
     {"roomId":{"name":"rm_design","path":"rooms/rm_design/rm_design.yy",},},
