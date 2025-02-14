@@ -6,7 +6,9 @@ var _play = collision_rectangle(x - sprite_width, y - sprite_height, x + sprite_
 		{
 			image_speed = 1;
 		}
-		if(image_speed = 1)
+	}
+	
+	if(image_speed == 1)
 		{
 			if(image_index >= image_number-2)
 			{
@@ -22,4 +24,3 @@ var _play = collision_rectangle(x - sprite_width, y - sprite_height, x + sprite_
 				image_speed = 0;
 			}
 		}
-	}
