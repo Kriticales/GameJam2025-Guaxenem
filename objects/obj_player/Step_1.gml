@@ -8,6 +8,7 @@ place_meeting(x, y + max(1, velv), obj_solido)
 ||(_plat && bbox_bottom <= _plat.bbox_top+2 && velv >0)
 ||place_meeting(x, y + max(1, velv), obj_caixa)
 ||place_meeting(x, y + max(1, velv), obj_player)
+||place_meeting(x, y + max(1, velv), obj_box_pass)
 
 //Compara o chão atual com o passado
 if(_chao && !chao && !_desce)

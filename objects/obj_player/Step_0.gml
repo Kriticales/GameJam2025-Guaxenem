@@ -57,6 +57,7 @@
 	chao =
 	place_meeting(x, y + max(1, velv), obj_solido) ||
 	place_meeting(x, y + max(1, velv), obj_player) ||
+	place_meeting(x, y + max(1, velv), obj_box_pass) ||
 	_is_on_plat ||
 	place_meeting(x, y + max(1, velv), obj_caixa);
 	

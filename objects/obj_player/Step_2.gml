@@ -61,6 +61,15 @@
 		velv = 0;
 	}
 	
+	if(place_meeting(x, y + velv, obj_box_pass))
+	{
+		while(!place_meeting(x, y + sign(velv), obj_box_pass))
+		{
+			y += sign(velv);
+		}
+		velv = 0;
+	}
+	
 	if(estado != STATE.SMASH)
 	{	
 		if(place_meeting(x, y + velv, obj_caixa))
@@ -82,6 +91,15 @@
 	if(place_meeting(x + velh, y, obj_solido))
 	{
 		while(!place_meeting(x + sign(velh), y, obj_solido))
+		{
+			x += sign(velh);
+		}
+		velh = 0;
+	}
+	
+	if(place_meeting(x + velh, y, obj_box_pass))
+	{
+		while(!place_meeting(x + sign(velh), y, obj_box_pass))
 		{
 			x += sign(velh);
 		}
