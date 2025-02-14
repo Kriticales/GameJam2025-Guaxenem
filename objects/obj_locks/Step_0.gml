@@ -1,9 +1,12 @@
-/// @description Inserir descrição aqui
-// Você pode escrever seu código neste editor
 if(active)
 {
-	image_index = 0;
-	image_speed = 0
+	visible = active;
+	image_speed = -1
+	if(image_index <= 1)
+	{
+		image_index = 0;
+		image_speed = 0
+	}
 }
 else
 {
