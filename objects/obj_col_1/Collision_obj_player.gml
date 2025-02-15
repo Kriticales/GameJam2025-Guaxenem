@@ -1,1 +1,1 @@
-layer_set_visible("COVER_1", false)
+layer_set_visible(cover, false)

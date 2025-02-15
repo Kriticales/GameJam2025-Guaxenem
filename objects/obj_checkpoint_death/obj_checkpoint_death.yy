@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_col_3",
+  "%Name":"obj_checkpoint_death",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_col_3",
+  "name":"obj_checkpoint_death",
   "overriddenProperties":[],
   "parent":{
-    "name":"Fase2",
-    "path":"folders/Objects/Fase2.yy",
+    "name":"Interativos",
+    "path":"folders/Objects/Interativos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +30,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_collision",
-    "path":"sprites/spr_collision/spr_collision.yy",
+    "name":"spr_collision_alt",
+    "path":"sprites/spr_collision_alt/spr_collision_alt.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
