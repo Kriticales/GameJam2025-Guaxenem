@@ -65,6 +65,8 @@
 	
 	estado_string = ""; //debug da state machine
 	
+	last_safe_x = x;
+	last_safe_y = y;
 	
 #endregion
 

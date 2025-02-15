@@ -84,6 +84,7 @@
 		tem_dash = carga_dash;
 		
 		trampolim = false;
+		
 	}
 	//se não tiver chão
 	else

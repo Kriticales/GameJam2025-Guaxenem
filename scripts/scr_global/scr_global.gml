@@ -6,8 +6,5 @@
 		obj_rex,
 		obj_bolota,
 		obj_fumaca
-	];
-#endregion
-
-#region FUNÇÕES
+	]
 #endregion
