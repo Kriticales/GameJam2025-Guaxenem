@@ -19,6 +19,13 @@ if(image_speed == 1)
 				active = !active;
 			}
 		}
+		with(obj_death_switch)
+		{
+			if(link == other.bloco_linkado)
+			{
+				active = !active;
+			}
+		}
 		alarm[0] = 230;
 		switched = true;
 		image_index = image_number-1
@@ -36,6 +43,13 @@ if(image_speed == -1)
 			with(obj_solido_switch)
 			{
 				if(controle == other.bloco_linkado)
+				{
+					active = !active;
+				}
+			}
+			with(obj_death_switch)
+			{
+				if(link == other.bloco_linkado)
 				{
 					active = !active;
 				}
