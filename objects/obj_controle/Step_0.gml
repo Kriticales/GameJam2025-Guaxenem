@@ -1,3 +1,27 @@
+var _reset = keyboard_check_pressed(global.array_controls[TECLA.RESET])
+var _rex = keyboard_check_pressed(global.array_controls[TECLA.REX])
+var _fumaca = keyboard_check_pressed(global.array_controls[TECLA.FUMAS])
+var _bolota = keyboard_check_pressed(global.array_controls[TECLA.BOLOTA])
+
+if(_reset)
+{
+	room_restart()
+}
+
+if(rex && _rex)
+{
+	global.selecionado = 0
+}
+else if(fumaca && _fumaca)
+{
+	global.selecionado = 1
+}
+else if(bolota && _bolota)
+{
+	global.selecionado = 2
+}
+
+
 //Checando se o player existe
 if (instance_exists(global.guaxinim[global.selecionado])) //Checando se o player existe
 {

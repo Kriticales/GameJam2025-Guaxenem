@@ -1,7 +1,8 @@
+
 //Checa se existe um chão
 var _plat = instance_place(x, y + max(1, velv), obj_plataforma);
 
-var _desce = keyboard_check(vk_down) || keyboard_check(ord("S"))
+var _desce = global.array_controls[TECLA.CAIR]
 
 var _chao =
 place_meeting(x, y + max(1, velv), obj_solido)

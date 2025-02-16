@@ -2,14 +2,14 @@ var _play = collision_rectangle(x - sprite_width, y - sprite_height, x + sprite_
 	
 	if(_play && _play.object_index = global.guaxinim[global.selecionado] && !switched)
 	{
-		if(keyboard_check_pressed(ord("F")))
+		if(keyboard_check_pressed(global.array_controls[TECLA.INTERACT]))
 		{
 			image_speed = 1;
 		}
 	}
 	else if(_play && _play.object_index = global.guaxinim[global.selecionado] && switched)
 	{
-		if(keyboard_check_pressed(ord("F")))
+		if(keyboard_check_pressed(global.array_controls[TECLA.INTERACT]))
 		{
 			image_speed = -1;
 		}

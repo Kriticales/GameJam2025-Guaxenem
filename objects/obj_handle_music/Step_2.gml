@@ -12,6 +12,7 @@ switch(tipo)
 				yscale = 0.7;
 				held = true;
 			}
+			
 			if(held)
 			{
 				var _dir = point_direction(x, y, mouse_x, mouse_y)
@@ -28,8 +29,8 @@ switch(tipo)
 	
 			with(obj_musica)
 			{
-				music_volume = ((other.x-277) / (310-277)) * 2;
-				audio_group_set_gain(musicas, music_volume, 0)
+				global.music_volume = ((other.x-277) / (310-277)) * 2;
+				audio_group_set_gain(musicas, global.music_volume, 0)
 			}
 		}
 		else
@@ -64,8 +65,8 @@ switch(tipo)
 	
 			with(obj_musica)
 			{
-				sfx_volume = ((other.x-277) / (310-277)) * 2;
-				audio_group_set_gain(sfxaudios, sfx_volume, 0)
+				global.sfx_volume = ((other.x-277) / (310-277)) * 2;
+				audio_group_set_gain(sfxaudios, global.sfx_volume, 0)
 			}
 		}
 		else

@@ -1,24 +1,32 @@
+
 #region CONTROLE HORIZONTAL
 	//Variável de Esquerda (verdadeiro se Esquerda OU A pressionado)
-	var _esquerda = keyboard_check(vk_left) || keyboard_check(ord("A"));
+	var _esquerda = keyboard_check(global.array_controls[TECLA.ESQUERDA])
+	//keyboard_check(vk_left) || keyboard_check(ord("A"));
 		
 	//Variável de Direita (verdadeiro se Direita OU D pressionado)
-	var _direita = keyboard_check(vk_right) || keyboard_check(ord("D"));
+	var _direita = keyboard_check(global.array_controls[TECLA.DIREITA])
+	//keyboard_check(vk_right) || keyboard_check(ord("D"));
 	
 	//Variável de Descer (verdadeiro se Baixo OU S pressionado)
-	var _desce = keyboard_check(vk_down) || keyboard_check(ord("S"))
+	var _desce = keyboard_check(global.array_controls[TECLA.CAIR])
+	//keyboard_check(vk_down) || keyboard_check(ord("S"))
 
 	//Variável de Pulo (Alto)
-	var _jump = keyboard_check_pressed(vk_space);
+	var _jump = keyboard_check_pressed(global.array_controls[TECLA.PULAR]);
+	//keyboard_check_pressed(vk_space);
 	
 	//Variável de Pulo (Baixo)
-	var _jump2 = keyboard_check_released(vk_space);
+	var _jump2 = keyboard_check_released(global.array_controls[TECLA.PULAR]);
+	//keyboard_check_released(vk_space);
 	
 	//Action Key (Baixo)
-	var _action_key_press = keyboard_check_pressed(action_key);
+	var _action_key_press = keyboard_check_pressed(global.array_controls[TECLA.ACTION])
+	//keyboard_check_pressed(action_key);
 	
 	//Action Key (Solta)
-	var _action_key_release = keyboard_check_released(action_key);
+	var _action_key_release = keyboard_check_released(global.array_controls[TECLA.ACTION]);
+	//keyboard_check_released(action_key);
 		
 	//Direção do Movimento. (Direita - Esquerda, onde -1 esqueda, 0 parado, 1 direita)
 	var _velocidade = (_direita - _esquerda) * max_velh;

@@ -7,10 +7,10 @@ switch(starting_char)
 	break;
 	
 	case "BOLOTA":
-		global.selecionado = 1;
+		global.selecionado = 2;
 	break;
 	
 	case "FUMAÇA":
-		global.selecionado = 2;
+		global.selecionado = 1;
 	break;
 }

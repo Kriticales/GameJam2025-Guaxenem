@@ -1,3 +1,5 @@
+image_got = false;
+
 if(global.guaxinim[global.selecionado] == object_index)
 {
 	if(pop)

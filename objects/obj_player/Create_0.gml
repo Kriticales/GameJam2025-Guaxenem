@@ -68,6 +68,8 @@
 	last_safe_x = x;
 	last_safe_y = y;
 	
+	image_got = false;
+	
 #endregion
 
 #region MÉTODOS

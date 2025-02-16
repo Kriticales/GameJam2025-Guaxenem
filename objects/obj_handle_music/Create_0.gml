@@ -2,10 +2,10 @@
 switch(tipo)
 {
 	case "MUSICA":	
-		x = 277 + (16.5 * obj_musica.music_volume)
+		x = 277 + (16.5 * global.music_volume)
 	break;
 	case "SFX":	
-		x = 277 + (16.5 * obj_musica.sfx_volume)
+		x = 277 + (16.5 * global.sfx_volume)
 	break;
 }
 
