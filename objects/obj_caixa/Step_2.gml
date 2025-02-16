@@ -117,6 +117,7 @@ var _play = collision_rectangle(x+6-(sprite_width/2), y-5- (sprite_height/2), x-
 	{
 		if(_play.estado == STATE.SMASH)
 		{
+			play_smash()
 			instance_destroy()
 			
 			var _smash = irandom_range(10, 30)
@@ -135,6 +136,7 @@ var _play = collision_rectangle(x+6-(sprite_width/2), y-5- (sprite_height/2), x-
 	{
 		if(_play.estado == STATE.DASH)
 		{
+			play_smash()
 			instance_destroy()
 			
 			var _smash = irandom_range(10, 30)

@@ -25,6 +25,8 @@
 		
 		if(_player.estado == STATE.TRAMPOLIM)
 		{
+			play_bolota();
+			play_jump();
 			velv = -(max_velv * _player.bolota_jump_force);
 			_player.xscale = 1.3 * _player.facing;
 			_player.yscale = 0.7;

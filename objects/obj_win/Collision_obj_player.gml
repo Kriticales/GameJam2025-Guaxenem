@@ -1,1 +1,9 @@
-room_goto_next();
+play_win()
+if(!is_last)
+{
+	room_goto_next();
+}
+else
+{
+	room_goto(rm_thanks)
+}

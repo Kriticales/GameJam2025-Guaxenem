@@ -124,6 +124,7 @@
 			{
 				//define a velocidade vertical do pulo
 				velv = -max_velv
+				play_jump()
 			}
 			
 			gravidade();
@@ -190,6 +191,7 @@
 				//Checa se está no chão & Pulando
 				if(is_buffered && (chao || kyote_timer))
 				{
+					play_jump()
 					//Se sim, aplica força do pulo
 					velv = -max_velv;
 				
@@ -349,6 +351,10 @@
 		
 		#region PUXANDO
 			case STATE.PUXANDO:
+			if(!audio_is_playing(snd_pushing))
+			{
+				play_pushing();
+			}
 				estado_string = "PUXANDO";
 		
 				//CONFIGURA OS EMPURRÕES
@@ -358,6 +364,7 @@
 				//MUDA O ESTADO DE ACORDO COM O PUXÃO
 				if(velh == 0)
 				{
+					audio_stop_sound(snd_pushing)
 					estado = STATE.HOLD;
 				}
 				else if(sign(velh) == hold_side)
@@ -377,6 +384,10 @@
 		
 		#region EMPURRANDO
 			case STATE.EMPURRANDO:
+				if(!audio_is_playing(snd_pushing))
+				{
+					play_pushing();
+				}
 				estado_string = "EMPURRANDO";
 		
 				//CONFIGURA OS EMPURRÕES
@@ -387,6 +398,7 @@
 				if(velh == 0)
 				{
 					estado = STATE.HOLD;
+					audio_stop_sound(snd_pushing)
 				}
 				else if(sign(velh) != hold_side)
 				{
@@ -412,6 +424,7 @@
 			
 				if(_jump && (chao || kyote_timer))
 				{
+					play_jump()
 					//define a velocidade vertical do pulo
 					velv = -max_velv
 					kyote_timer = 0;
@@ -459,6 +472,11 @@
 			break;
 		#endregion
 	}
+	
+if(chao && velh != 0 && !audio_is_playing(snd_footstep))
+{
+	play_footstep()
+}
 #endregion
 
 #region RESET DE VARIÁVEIS

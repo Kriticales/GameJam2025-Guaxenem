@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_landing",
+  "audioGroupId":{
+    "name":"sfxaudios",
+    "path":"audiogroups/sfxaudios",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.522425,
+  "name":"snd_landing",
+  "parent":{
+    "name":"sfx",
+    "path":"folders/Sounds/sfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_landing.mp3",
+  "type":0,
+  "volume":1.0,
+}

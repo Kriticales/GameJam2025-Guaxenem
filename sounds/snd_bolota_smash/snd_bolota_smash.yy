@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bolota_smash",
+  "audioGroupId":{
+    "name":"sfxaudios",
+    "path":"audiogroups/sfxaudios",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.337392,
+  "name":"snd_bolota_smash",
+  "parent":{
+    "name":"sfx",
+    "path":"folders/Sounds/sfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bolota_smash.wav",
+  "type":0,
+  "volume":1.0,
+}

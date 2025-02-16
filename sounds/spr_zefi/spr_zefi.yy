@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"spr_zefi",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"sfxaudios",
+    "path":"audiogroups/sfxaudios",
   },
   "bitDepth":1,
   "bitRate":128,

@@ -14,6 +14,7 @@ place_meeting(x, y + max(1, velv), obj_solido)
 if(_chao && !chao && !_desce)
 {
 	//se estiver no chão agora, e não antes, aplica animação de pouso
+	play_landing();
 	xscale *= 1.5;
 	yscale *= 0.5;
 	
