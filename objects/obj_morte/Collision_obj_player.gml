@@ -1,3 +1,5 @@
+play_damage();
+
 with(other)
 {
 	var _issue = true;

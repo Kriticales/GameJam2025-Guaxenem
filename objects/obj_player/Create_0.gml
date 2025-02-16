@@ -87,6 +87,7 @@
 	{
 		if (_dash && tem_dash > 0 && object_index == obj_fumaca)
 			{
+				play_dash()
 				tem_dash -= 1;
 				dir =  point_direction(0, 0, facing, 0);
 				estado = STATE.DASH;
@@ -135,6 +136,8 @@
 			
 			if(_jump && (chao || kyote_timer) && hold != noone)
 			{
+				var _pitch = random_range(0.8, 1.2)
+				audio_play_sound(snd_jump, 0, 0, 1, 0, _pitch)
 				//define a velocidade vertical do pulo
 				velv = -max_velv
 				hold.velh = 0;

@@ -27,6 +27,7 @@
     {"name":"inst_5FD7F65F","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_4CA85691","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_1FCA3C94","path":"rooms/rm_level1/rm_level1.yy",},
+    {"name":"inst_3EFC9213","path":"rooms/rm_level1/rm_level1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -34,6 +35,7 @@
         {"$GMRInstance":"v1","%Name":"inst_561C9991","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_561C9991","objectId":{"name":"obj_pixel","path":"objects/obj_pixel/obj_pixel.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2544.0,"y":544.0,},
         {"$GMRInstance":"v1","%Name":"inst_75156692","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75156692","objectId":{"name":"obj_rex","path":"objects/obj_rex/obj_rex.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1344.0,"y":576.0,},
         {"$GMRInstance":"v1","%Name":"inst_5FD7F65F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5FD7F65F","objectId":{"name":"obj_bolota","path":"objects/obj_bolota/obj_bolota.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3088.0,"y":528.0,},
+        {"$GMRInstance":"v1","%Name":"inst_3EFC9213","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3EFC9213","objectId":{"name":"obj_musica","path":"objects/obj_musica/obj_musica.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":16.0,"y":-112.0,},
       ],"layers":[],"name":"Players","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Objetos_Interativos","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_38172D7E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_38172D7E","objectId":{"name":"obj_caixa","path":"objects/obj_caixa/obj_caixa.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1072.0,"y":656.0,},
