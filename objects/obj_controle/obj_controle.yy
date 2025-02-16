@@ -30,7 +30,16 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"starting_char","filters":[],"listItems":[
+        "\"REX\"",
+        "\"BOLOTA\"",
+        "\"FUMAÇA\"",
+      ],"multiselect":false,"name":"starting_char","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"REX\"","varType":6,},
+    {"$GMObjectProperty":"v1","%Name":"rex","filters":[],"listItems":[],"multiselect":false,"name":"rex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"bolota","filters":[],"listItems":[],"multiselect":false,"name":"bolota","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"fumaca","filters":[],"listItems":[],"multiselect":false,"name":"fumaca","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

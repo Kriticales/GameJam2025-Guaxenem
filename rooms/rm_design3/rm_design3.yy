@@ -63,7 +63,7 @@
         {"$GMRInstance":"v1","%Name":"inst_796E474B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_796E474B","objectId":{"name":"obj_locks","path":"objects/obj_locks/obj_locks.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_locks","path":"objects/obj_locks/obj_locks.yy",},"propertyId":{"name":"color","path":"objects/obj_locks/obj_locks.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF2929CE",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_solido_switch","path":"objects/obj_solido_switch/obj_solido_switch.yy",},"propertyId":{"name":"controle","path":"objects/obj_solido_switch/obj_solido_switch.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"SWITCHING",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":247.0,"y":59.0,},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":249.0,"y":59.0,},
         {"$GMRInstance":"v1","%Name":"inst_76B48F65","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_76B48F65","objectId":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":64.0,},
         {"$GMRInstance":"v1","%Name":"inst_24869DB6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24869DB6","objectId":{"name":"obj_switch","path":"objects/obj_switch/obj_switch.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_switch","path":"objects/obj_switch/obj_switch.yy",},"propertyId":{"name":"bloco_linkado","path":"objects/obj_switch/obj_switch.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"SWITCHING",},
@@ -108,8 +108,8 @@
   ],
   "name":"rm_design3",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Game",
+    "path":"folders/Rooms/Game.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

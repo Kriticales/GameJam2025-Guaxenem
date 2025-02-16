@@ -351,10 +351,6 @@
 		
 		#region PUXANDO
 			case STATE.PUXANDO:
-			if(!audio_is_playing(snd_pushing))
-			{
-				play_pushing();
-			}
 				estado_string = "PUXANDO";
 		
 				//CONFIGURA OS EMPURRÕES
@@ -384,10 +380,6 @@
 		
 		#region EMPURRANDO
 			case STATE.EMPURRANDO:
-				if(!audio_is_playing(snd_pushing))
-				{
-					play_pushing();
-				}
 				estado_string = "EMPURRANDO";
 		
 				//CONFIGURA OS EMPURRÕES

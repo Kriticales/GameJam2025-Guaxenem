@@ -1,7 +1,44 @@
-if(global.selecionado > 0)
+if(rex && bolota && fumaca)
 {
-	global.selecionado -= 1
-}else
+	if(global.selecionado < 0)
+	{
+		global.selecionado -= 1
+	}else
+	{
+		global.selecionado = array_length(global.guaxinim) - 1;
+	}
+}
+else if(rex && bolota)
 {
-	global.selecionado = array_length(global.guaxinim) -1
+	//0 & 1
+	if(global.selecionado == 0)
+	{
+		global.selecionado = 1
+	}else
+	{
+		global.selecionado = 0;
+	}
+	
+}
+else if(rex && fumaca)
+{
+	//0 & 2
+	if(global.selecionado == 0)
+	{
+		global.selecionado = 2
+	}else
+	{
+		global.selecionado = 0;
+	}
+}
+else if(bolota && fumaca)
+{
+	//1 & 2
+	if(global.selecionado == 1)
+	{
+		global.selecionado = 2
+	}else
+	{
+		global.selecionado = 1;
+	}
 }

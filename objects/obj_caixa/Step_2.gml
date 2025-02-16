@@ -130,22 +130,22 @@ var _play = collision_rectangle(x+6-(sprite_width/2), y-5- (sprite_height/2), x-
 		}
 	}
 	
-	_play = collision_rectangle(x-5- (sprite_width/2), y- (sprite_height/2), x+5+ (sprite_width/2), y+ (sprite_height/2), obj_player, false, true)
+	//_play = collision_rectangle(x-5- (sprite_width/2), y- (sprite_height/2), x+5+ (sprite_width/2), y+ (sprite_height/2), obj_player, false, true)
 	
-	if(_play)
-	{
-		if(_play.estado == STATE.DASH)
-		{
-			play_smash()
-			instance_destroy()
+	//if(_play)
+	//{
+	//	if(_play.estado == STATE.DASH)
+	//	{
+	//		play_smash()
+	//		instance_destroy()
 			
-			var _smash = irandom_range(10, 30)
-			for(var i = 0; i < _smash; i++)
-			{
-				var xx = random_range(x - sprite_width/2, x + sprite_width/2)
+	//		var _smash = irandom_range(10, 30)
+	//		for(var i = 0; i < _smash; i++)
+	//		{
+	//			var xx = random_range(x - sprite_width/2, x + sprite_width/2)
 		
-				instance_create_depth(xx, y, -100, obj_fragmento)
-			}
-		}
-	}
+	//			instance_create_depth(xx, y, -100, obj_fragmento)
+	//		}
+	//	}
+	//}
 	

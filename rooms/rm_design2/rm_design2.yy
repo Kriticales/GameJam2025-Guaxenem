@@ -84,7 +84,7 @@
         {"$GMRInstance":"v1","%Name":"inst_75CC51C8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75CC51C8","objectId":{"name":"obj_locks","path":"objects/obj_locks/obj_locks.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_solido_switch","path":"objects/obj_solido_switch/obj_solido_switch.yy",},"propertyId":{"name":"controle","path":"objects/obj_solido_switch/obj_solido_switch.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"BLOCK",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_locks","path":"objects/obj_locks/obj_locks.yy",},"propertyId":{"name":"color","path":"objects/obj_locks/obj_locks.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF2D2DE5",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":294.0,"y":312.0,},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":313.0,"y":313.0,},
         {"$GMRInstance":"v1","%Name":"inst_4394238F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4394238F","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"bloco_linkado","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"BLOCK",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":357.0,},
@@ -133,8 +133,8 @@
   ],
   "name":"rm_design2",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Game",
+    "path":"folders/Rooms/Game.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
