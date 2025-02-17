@@ -15,7 +15,7 @@ else
 
 	draw_set_color(cor_do_texto);
 	//Faz desenhar o texto do Botões
-	draw_text_transformed(x, y, texto_dos_botao, txt_xscale, txt_yscale, image_angle);
+	draw_text_transformed(x, y, texto_dos_botao, txt_xscale*txt_escala, txt_yscale*txt_escala, image_angle);
 
 	draw_set_color(-1);
 

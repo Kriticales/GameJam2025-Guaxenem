@@ -9,5 +9,20 @@ switch(fazer)
 	case "JOGAR":
 		room_goto(room_escolhida)
 	break;
+	case "INICIAR":
+	
+	for(var _i = 0; _i < array_length(global.niveis); _i++)
+	{
+		if(global.niveis[_i])
+		{
+			direto = _i
+		}
+	}
+	if(direto != array_length(global.niveis))
+	{
+		direto = direto + 1
+	}
+		room_goto(direto)
+	break;
 
 }

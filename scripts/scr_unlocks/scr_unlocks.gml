@@ -1,23 +1,17 @@
-global.niveis =
-[
-	true,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false,
-	false
-]
+global.niveis = [];
+
+var quantidade_niveis = 24;
+for(var _i = 0; _i < quantidade_niveis; _i++)
+{
+	if(_i == 0)
+	{
+		global.niveis[_i] = true;
+	}
+	else
+	{
+		global.niveis[_i] = false;
+	}
+}
 
 global.music_volume = 1;
 global.sfx_volume = 1.5;

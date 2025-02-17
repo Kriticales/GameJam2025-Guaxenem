@@ -32,11 +32,13 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"texto_dos_botao","filters":[],"listItems":[],"multiselect":false,"name":"texto_dos_botao","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"txt_escala","filters":[],"listItems":[],"multiselect":false,"name":"txt_escala","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"room_escolhida","filters":[],"listItems":[],"multiselect":false,"name":"room_escolhida","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_menu","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"cor_do_texto","filters":[],"listItems":[],"multiselect":false,"name":"cor_do_texto","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FF000000","varType":7,},
     {"$GMObjectProperty":"v1","%Name":"fazer","filters":[],"listItems":[
         "\"SAIR\"",
         "\"JOGAR\"",
+        "\"INICIAR\"",
       ],"multiselect":false,"name":"fazer","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"SAIR\"","varType":6,},
     {"$GMObjectProperty":"v1","%Name":"imagem","filters":[],"listItems":[],"multiselect":false,"name":"imagem","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"sprite_imagem","filters":[],"listItems":[],"multiselect":false,"name":"sprite_imagem","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},

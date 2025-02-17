@@ -135,7 +135,9 @@
         {"$GMRInstance":"v1","%Name":"inst_1F4B6C8E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1F4B6C8E","objectId":{"name":"obj_caixa","path":"objects/obj_caixa/obj_caixa.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1152.0,"y":687.0,},
         {"$GMRInstance":"v1","%Name":"inst_3012E62F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3012E62F","objectId":{"name":"obj_caixa","path":"objects/obj_caixa/obj_caixa.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":852.0,"y":495.0,},
         {"$GMRInstance":"v1","%Name":"inst_79A1308C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_79A1308C","objectId":{"name":"obj_caixa","path":"objects/obj_caixa/obj_caixa.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":900.0,"y":495.0,},
-        {"$GMRInstance":"v1","%Name":"inst_13CB1856","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_13CB1856","objectId":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":137.0,"y":464.0,},
+        {"$GMRInstance":"v1","%Name":"inst_13CB1856","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_13CB1856","objectId":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},"propertyId":{"name":"unlock_index","path":"objects/obj_win/obj_win.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":137.0,"y":464.0,},
       ],"layers":[],"name":"Interaction_layer","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Players","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_435741D1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_435741D1","objectId":{"name":"obj_bolota","path":"objects/obj_bolota/obj_bolota.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":39.0,"y":324.0,},
@@ -185,7 +187,7 @@
   ],
   "viewSettings":{
     "clearDisplayBuffer":true,
-    "clearViewBackground":false,
+    "clearViewBackground":true,
     "enableViews":true,
     "inheritViewSettings":false,
   },

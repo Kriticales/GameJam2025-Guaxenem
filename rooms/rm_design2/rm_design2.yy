@@ -77,7 +77,9 @@
         {"$GMRInstance":"v1","%Name":"inst_67ADF10A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_67ADF10A","objectId":{"name":"obj_morte","path":"objects/obj_morte/obj_morte.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.5,"scaleY":0.25,"x":32.0,"y":176.0,},
         {"$GMRInstance":"v1","%Name":"inst_59BA4F96","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_59BA4F96","objectId":{"name":"obj_morte","path":"objects/obj_morte/obj_morte.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.25,"scaleY":1.75,"x":320.0,"y":192.0,},
         {"$GMRInstance":"v1","%Name":"inst_6CC30F77","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6CC30F77","objectId":{"name":"obj_morte","path":"objects/obj_morte/obj_morte.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.25,"scaleY":3.5,"x":448.0,"y":112.0,},
-        {"$GMRInstance":"v1","%Name":"inst_2872DE4C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2872DE4C","objectId":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":432.0,"y":48.0,},
+        {"$GMRInstance":"v1","%Name":"inst_2872DE4C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2872DE4C","objectId":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},"propertyId":{"name":"unlock_index","path":"objects/obj_win/obj_win.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"21",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":432.0,"y":48.0,},
         {"$GMRInstance":"v1","%Name":"inst_30FCC060","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_30FCC060","objectId":{"name":"obj_doors","path":"objects/obj_doors/obj_doors.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_solido_switch","path":"objects/obj_solido_switch/obj_solido_switch.yy",},"propertyId":{"name":"controle","path":"objects/obj_solido_switch/obj_solido_switch.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"BLOCK",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":0.5079365,"x":288.0,"y":304.0,},
@@ -165,7 +167,7 @@
   ],
   "viewSettings":{
     "clearDisplayBuffer":true,
-    "clearViewBackground":false,
+    "clearViewBackground":true,
     "enableViews":true,
     "inheritViewSettings":false,
   },

@@ -19,15 +19,16 @@
     {"name":"inst_ADF3C71","path":"rooms/rm_jump_cristal/rm_jump_cristal.yy",},
     {"name":"inst_3F8504B8","path":"rooms/rm_jump_cristal/rm_jump_cristal.yy",},
     {"name":"inst_5FFAF4BD","path":"rooms/rm_jump_cristal/rm_jump_cristal.yy",},
+    {"name":"inst_118C75F1","path":"rooms/rm_jump_cristal/rm_jump_cristal.yy",},
+    {"name":"inst_49D9E43C","path":"rooms/rm_jump_cristal/rm_jump_cristal.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Controle","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_65AF26E7_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_65AF26E7_1_1_1","objectId":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},"propertyId":{"name":"starting_char","path":"objects/obj_controle/obj_controle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"FUMAÇA\"",},
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},"propertyId":{"name":"rex","path":"objects/obj_controle/obj_controle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},"propertyId":{"name":"bolota","path":"objects/obj_controle/obj_controle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":-16.0,},
+        {"$GMRInstance":"v1","%Name":"inst_49D9E43C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_49D9E43C","objectId":{"name":"obj_cristal_pulo","path":"objects/obj_cristal_pulo/obj_cristal_pulo.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":32.0,},
       ],"layers":[],"name":"Controle","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Interaction","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_4CE5F14B_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CE5F14B_1_1_1","objectId":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},"properties":[
@@ -43,6 +44,7 @@
         {"$GMRInstance":"v1","%Name":"inst_23975364_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_23975364_1","objectId":{"name":"obj_solido","path":"objects/obj_solido/obj_solido.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":7.0000005,"x":272.0,"y":208.0,},
         {"$GMRInstance":"v1","%Name":"inst_3FCF798C_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3FCF798C_1","objectId":{"name":"obj_solido","path":"objects/obj_solido/obj_solido.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":5.0,"x":432.0,"y":80.0,},
         {"$GMRInstance":"v1","%Name":"inst_5FFAF4BD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5FFAF4BD","objectId":{"name":"obj_solido","path":"objects/obj_solido/obj_solido.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":7.0000005,"x":592.0,"y":208.0,},
+        {"$GMRInstance":"v1","%Name":"inst_118C75F1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_118C75F1","objectId":{"name":"obj_solido","path":"objects/obj_solido/obj_solido.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":20.0,"scaleY":1.0,"x":320.0,"y":-16.0,},
       ],"layers":[],"name":"Collision","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Players","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_34365D36_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_34365D36_1_1_1","objectId":{"name":"obj_fumaca","path":"objects/obj_fumaca/obj_fumaca.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":320.0,},
@@ -87,7 +89,7 @@
   ],
   "viewSettings":{
     "clearDisplayBuffer":true,
-    "clearViewBackground":false,
+    "clearViewBackground":true,
     "enableViews":true,
     "inheritViewSettings":false,
   },

@@ -32,6 +32,7 @@
     {"$GMObjectProperty":"v1","%Name":"bloco_linkado","filters":[],"listItems":[],"multiselect":true,"name":"bloco_linkado","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"tem_cor","filters":[],"listItems":[],"multiselect":false,"name":"tem_cor","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"color","filters":[],"listItems":[],"multiselect":false,"name":"color","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FF000000","varType":7,},
+    {"$GMObjectProperty":"v1","%Name":"tempo","filters":[],"listItems":[],"multiselect":false,"name":"tempo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"230","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
