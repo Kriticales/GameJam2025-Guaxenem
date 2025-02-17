@@ -13,7 +13,7 @@
     {"name":"inst_36DD58D6_1","path":"rooms/rm_niveis_2/rm_niveis_2.yy",},
     {"name":"inst_4971FD3_1","path":"rooms/rm_niveis_2/rm_niveis_2.yy",},
     {"name":"inst_33038615_1","path":"rooms/rm_niveis_2/rm_niveis_2.yy",},
-    {"name":"inst_3C03C4A9","path":"rooms/rm_niveis_2/rm_niveis_2.yy",},
+    {"name":"inst_EA83A90_1","path":"rooms/rm_niveis_2/rm_niveis_2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -22,7 +22,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"propertyId":{"name":"texto_dos_botao","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"MENU",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"propertyId":{"name":"fazer","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"JOGAR\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.5,"scaleY":0.75,"x":232.0,"y":160.0,},
-        {"$GMRInstance":"v1","%Name":"inst_3C03C4A9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3C03C4A9","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"properties":[
+        {"$GMRInstance":"v1","%Name":"inst_EA83A90_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_EA83A90_1","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"propertyId":{"name":"texto_dos_botao","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ANTERIOR",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"propertyId":{"name":"fazer","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"JOGAR\"",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_botao_pai","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"propertyId":{"name":"room_escolhida","path":"objects/obj_botao_pai/obj_botao_pai.yy",},"resource":{"name":"rm_niveis","path":"rooms/rm_niveis/rm_niveis.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_niveis",},
